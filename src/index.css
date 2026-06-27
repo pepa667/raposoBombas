@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%);
+  --color-raposo-red: #891617;
+  --color-raposo-yellow: #ffd400;
+  --color-raposo-yellow-washed: #fbd471;
+  --font-sans: "Inter", sans-serif;
+}
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+  body {
+    @apply bg-raposo-dark text-raposo-yellow-washed m-0 p-0 min-h-svh **:duration-1000;
+  }
+}
