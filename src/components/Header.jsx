@@ -3,8 +3,8 @@ import { ZapZap } from "./ZapZap"; // Certifique-se de que o nome e caminho bate
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-raposo-yellow bg-raposo-dark">
-      <div className="mx-auto max-h-25 flex gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-0 border-b-2 border-slate-700 bg-raposo-dark transition-none">
+      <div className="mx-auto max-h-25 flex gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8 *:transition-all *:duration-700">
         {/* CONTAINER DA LOGO */}
         <a
           href="#"
@@ -18,7 +18,7 @@ export function Header() {
         </a>
 
         {/* NAVEGAÇÃO */}
-        <nav className="hidden md:flex items-center gap-8 text-lg font-semibold text-neutral-400 *:transition-colors *:hover:text-raposo-yellow-washed">
+        <nav className="hidden md:flex items-center gap-8 text-lg font-semibold text-neutral-400 *:transition-colors *:hover:text-raposo-yellow-washed *:text-[clamp(0.5rem,1.5vw,1rem)]">
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre&nbsp;Nós</a>
           <a href="#contato">Contato</a>

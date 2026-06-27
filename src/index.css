@@ -12,6 +12,9 @@
     @apply antialiased scroll-smooth;
   }
   body {
-    @apply bg-raposo-dark text-raposo-yellow-washed m-0 p-0 min-h-svh **:duration-1000;
+    @apply bg-raposo-dark text-raposo-yellow-washed m-0 p-0;
+  }
+  section {
+    @apply **:duration-500;
   }
 }
