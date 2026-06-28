@@ -65,14 +65,14 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className=" mx-auto max-w-6xl px-4 py-16 mb-10 sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-700 border-2"
+      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-raposo-red/50 border-2"
     >
-      <div className="text-center space-y-4 mb-16">
-        <h2 className="text-3xl font-bold tracking-tight text-raposo-dark sm:text-4xl">
+      <div className="text-center space-y-16 mb-16">
+        <h2 className="text-3xl font-bold tracking-tight text-slate-200 sm:text-6xl">
           Nossos Serviços Especializados
         </h2>
-        <div className="mx-auto h-1 w-12 bg-raposo-red rounded-full"></div>
-        <p className="mx-auto max-w-2xl text-neutral-500">
+        <div className="relative mx-auto h-1 w-64 bg-raposo-yellow rounded-full before:content-[''] before:w-[60svw] before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-translate-y-1/2 before:top-[50%]   "></div>
+        <p className="mx-auto max-w-2xl text-neutral-400 text-2xl">
           Equipamentos de diagnóstico avançado para garantir a máxima
           performance e regulagem do seu motor diesel.
         </p>

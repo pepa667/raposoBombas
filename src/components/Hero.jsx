@@ -46,7 +46,7 @@ export function Hero() {
           </div>
         </div>
         <div className="relative h-full flex flex-col flex-wrap justify-around">
-          <h1 className="scroll-reveal text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
             Especialistas em{" "}
             <span className="text-raposo-yellow">Injeção&nbsp;Diesel</span>
           </h1>
@@ -66,7 +66,7 @@ export function Hero() {
             </a>
             <a
               href="#servicos"
-              className="rounded-md border border-neutral-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-raposo-yellow-washed/10 hover:border-raposo-yellow hover:text-raposo-yellow"
+              className="rounded-md border border-neutral-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-raposo-red/60 hover:border-raposo-yellow hover:text-raposo-yellow"
             >
               Ver Serviços
             </a>
