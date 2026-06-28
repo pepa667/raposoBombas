@@ -24,18 +24,31 @@
   @keyframes rollDown {
     0% {
       opacity: 1;
+      transform: translateY(1svh);
     }
-    48% {
-      transform: translateY(-10svh);
-    }
-    80% {
+    /* Até 40% do scroll da hero, ele começa a descer */
+    20% {
       opacity: 1;
     }
+    /* Quando a hero sumir quase toda (ex: 80% da rolagem dela), ele some e afunda */
     100% {
       opacity: 0;
-      transform: translateY(70svh);
+      transform: translateY(100svh); /* Ajuste a distância conforme seu design */
     }
   }
+
+  .roll-down {
+    /* 1. Vincula ao scroll global da página (root) */
+    animation-timeline: scroll(root);
+    animation-name: rollDown;
+
+    /* 2. Mantém o estado final da animação preso no último frame */
+    animation-fill-mode: both;
+
+    /* 3. A animação acontece estritamente enquanto scrollamos do topo (0) até o final da Hero (100vh) */
+    animation-range: 0 100vh;
+  }
+
   @keyframes revealOnScroll {
     from {
       opacity: 0;
@@ -49,16 +62,6 @@
     }
   }
 
-  /* Aplica reveal suave conforme as seções entram na tela */
-  .roll-down {
-    view-timeline-name: --section;
-    view-timeline-axis: block;
-    animation-name: rollDown;
-    animation-fill-mode: backwards;
-    animation-timeline: --section;
-    /* Usa a variável se ela existir, senão o padrão é 0% */
-    animation-range: contain 50% exit 100%;
-  }
   .scroll-reveal {
     view-timeline-name: --section;
     view-timeline-axis: block;
@@ -71,7 +74,11 @@
 }
 
 /* Fallback clássico caso o navegador não suporte animação de scroll */
-@media (prefixed-animation-timeline: none) {
+@supports not (animation-timeline: scroll()) {
+  .roll-down {
+    opacity: 1;
+    transform: none;
+  }
   .scroll-reveal {
     opacity: 1;
     transform: none;
