@@ -65,7 +65,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="mx-auto max-w-6xl px-4 py-16 mb-10 sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-700 border-2"
+      className="z-100 mx-auto max-w-6xl px-4 py-16 mb-10 sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-700 border-2"
     >
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-raposo-dark sm:text-4xl">
@@ -82,7 +82,7 @@ export function Services() {
         {SERVICOS.map((servico, index) => (
           <div
             key={index}
-            className="group relative rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md"
+            className="scroll-reveal group relative rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md"
           >
             <div className="mb-4 inline-block rounded-lg bg-raposo-red/5 p-3 text-raposo-red group-hover:bg-raposo-red group-hover:text-white transition-colors">
               {servico.icon}

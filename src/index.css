@@ -3,6 +3,7 @@
 @theme {
   --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%);
   --color-raposo-red: #891617;
+  --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);
   --color-raposo-yellow: #ffd400;
   --color-raposo-yellow-washed: #fbd471;
   --font-sans: "Inter", sans-serif;
@@ -16,5 +17,63 @@
   }
   section {
     @apply **:duration-500;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @keyframes rollDown {
+    0% {
+      opacity: 1;
+    }
+    48% {
+      transform: translateY(-10svh);
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(70svh);
+    }
+  }
+  @keyframes revealOnScroll {
+    from {
+      opacity: 0;
+      transform: translateY(200px);
+      filter: brightness(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: brightness(1);
+    }
+  }
+
+  /* Aplica reveal suave conforme as seções entram na tela */
+  .roll-down {
+    view-timeline-name: --section;
+    view-timeline-axis: block;
+    animation-name: rollDown;
+    animation-fill-mode: backwards;
+    animation-timeline: --section;
+    /* Usa a variável se ela existir, senão o padrão é 0% */
+    animation-range: contain 50% exit 100%;
+  }
+  .scroll-reveal {
+    view-timeline-name: --section;
+    view-timeline-axis: block;
+    animation-name: revealOnScroll;
+    animation-fill-mode: both;
+    animation-timeline: --section;
+    /* Usa a variável se ela existir, senão o padrão é 0% */
+    animation-range: contain 0% exit 100%;
+  }
+}
+
+/* Fallback clássico caso o navegador não suporte animação de scroll */
+@media (prefixed-animation-timeline: none) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
   }
 }

@@ -8,7 +8,7 @@ export function Header() {
         {/* CONTAINER DA LOGO */}
         <a
           href="#"
-          className="relative bg-raposo-dark w-full min-w-60 max-w-90 px-6 py-4 pt-20 md:pt-10 drop-shadow-[0_10px_5px_rgba(0,0,0,0.9)]  rounded-xl border border-raposo-dark group"
+          className="relative bg-raposo-dark w-full min-w-60 max-w-90 px-6 py-4 pt-14 md:pt-10 drop-shadow-[0_10px_5px_rgba(0,0,0,0.9)]  rounded-xl border border-raposo-dark group"
         >
           <div className="absolute bg-linear-to-b from-slate-300/12 to-slfrom-slate-300/4 blur-[2px] size-[calc(100%-1rem)] m-2 inset-ring-8/4 top-0 left-0 rounded-sm -z-10"></div>
           <LogoRaposo

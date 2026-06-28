@@ -21,14 +21,19 @@ export function Hero() {
       <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-[140svh] "></div>
       {/* <div className="absolute -right-10 -top-10 h-96 w-96 rounded-full bg-raposo-red/10 blur-3xl z-10"></div> */}
 
-      <div className="relative mx-auto w-[80svw] max-w-6xl z-20 *:w-[70%] h-full ">
-        <div className="absolute">
+      <div className="relative mx-auto w-[80svw] max-w-6xl *:w-[70%] h-full z-100 ">
+        <div
+          className="roll-down absolute top-0 right-0 max-w-fit scale-125 -z-100
+          before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2
+          before:-translate-y-1/2 before:size-20 before:rotate-45 before:border before:border-raposo-yellow before:-z-100   before:bg-raposo-red-dark     
+        "
+        >
           <div
             className="
-            absolute flex flex-col items-center max-w-fit px-20 py-2 -right-20 top-20 rounded-sm text-raposo-yellow font-serif tracking-widest
-            bg-[linear-gradient(to_right,#ff000000_0%,hsl(from_var(--color-red-950)_h_50%_10%)_20%,hsl(from_var(--color-red-950)_h_50%_10%)_80%,#0000ff00_100%)]
-            before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2
-            before:-translate-y-1/2 before:size-20 before:rotate-45 before:border before:border-raposo-yellow before:-z-10 "
+            flex flex-col items-center justify-center max-w-fit px-5 py-0 h-16 text-raposo-yellow font-serif tracking-widest
+            bg-raposo-red-dark -z-10
+            before:conent-[''] before:absolute before:border-0 before:border-y-32  before:border-r-30  before:border-r-raposo-red-dark before:border-transparent before:left-0 before:-translate-x-full  before:top-0 before:h-14
+            after:conent-[''] after:absolute after:border-0 after:border-y-32  after:border-l-30  after:border-l-raposo-red-dark after:border-transparent after:right-0 after:translate-x-full  after:top-0 after:h-14"
           >
             <span className="inlineine ">
               &bull;&nbsp;
@@ -41,7 +46,7 @@ export function Hero() {
           </div>
         </div>
         <div className="relative h-full flex flex-col flex-wrap justify-around">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
+          <h1 className="scroll-reveal text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
             Especialistas em{" "}
             <span className="text-raposo-yellow">Injeção&nbsp;Diesel</span>
           </h1>
@@ -55,13 +60,13 @@ export function Hero() {
               href="https://wa.me/seunumerodoZap"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md bg-raposo-yellow px-6 py-3 text-sm font-extrabold text-raposo-dark shadow-md transition-all hover:bg-yellow-400 hover:shadow-xl active:scale-95"
+              className="rounded-md bg-raposo-yellow px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all hover:bg-yellow-400 hover:shadow-xl active:scale-95"
             >
               Solicitar Orçamento
             </a>
             <a
               href="#servicos"
-              className="rounded-md border border-neutral-500 bg-transparent px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10"
+              className="rounded-md border border-neutral-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-raposo-yellow-washed/10 hover:border-raposo-yellow hover:text-raposo-yellow"
             >
               Ver Serviços
             </a>
