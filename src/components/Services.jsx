@@ -65,7 +65,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="z-100 mx-auto max-w-6xl px-4 py-16 mb-10 sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-700 border-2"
+      className=" mx-auto max-w-6xl px-4 py-16 mb-10 sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-700 border-2"
     >
       <div className="text-center space-y-4 mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-raposo-dark sm:text-4xl">
