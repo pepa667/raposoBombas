@@ -1,63 +1,33 @@
+import bicosWebp from "../assets/services/bicos.webp";
+import bombasWebp from "../assets/services/bombas.webp";
+import injecaoWebp from "../assets/services/injecao.webp";
+import bicosPng from "../assets/services/bicos.png";
+import bombasPng from "../assets/services/bombas.png";
+import injecaoPng from "../assets/services/injecao.png";
+
+
+
 const SERVICOS = [
   {
     title: "Bombas Injetoras",
     description:
       "Testes, regulagem eletrônica e recondicionamento completo de bombas injetoras convencionais e de alta pressão.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
-        />
-      </svg>
-    ),
+    ilustraWebp: bombasWebp,
+    ilustraPng: bombasPng,
   },
   {
     title: "Bicos Injetores",
     description:
       "Análise de vazão, limpeza por ultrassom, calibração precisa e troca de componentes para pulverização perfeita.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M3 12l-3 3m3-3l3 3"
-        />
-      </svg>
-    ),
+    ilustraWebp: bicosWebp,
+    ilustraPng: bicosPng,
   },
   {
     title: "Injeção Eletrônica Diesel",
     description:
       "Diagnóstico via scanner computadorizado de sistemas Common Rail e correção de falhas eletrônicas complexas.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25M19.5 5.25l-3.59 3.59a2.25 2.25 0 01-3.182 0L12.73 8.84a2.25 2.25 0 00-3.182 0L5.25 13.5m14.25-8.25A2.25 2.25 0 0017.25 3H6.75A2.25 2.25 0 004.5 5.25"
-        />
-      </svg>
-    ),
+    ilustraWebp: injecaoWebp,
+    ilustraPng: injecaoPng,
   },
 ];
 
@@ -65,13 +35,13 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-raposo-red/50 border-2"
+      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-500/50 border-2"
     >
       <div className="text-center space-y-16 mb-16">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-200 sm:text-6xl">
+        <h2 className="text-3xl font-bold tracking-tight text-slate-200/80 sm:text-6xl">
           Nossos Serviços Especializados
         </h2>
-        <div className="relative mx-auto h-1 w-64 bg-raposo-yellow rounded-full before:content-[''] before:w-[60svw] before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-translate-y-1/2 before:top-[50%]   "></div>
+        <div className="relative mx-auto h-1 w-64 bg-raposo-yellow rounded-full before:content-[''] before:max-w-[80svw] before:w-4xl before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-translate-y-1/2 before:top-[50%]   "></div>
         <p className="mx-auto max-w-2xl text-neutral-400 text-2xl">
           Equipamentos de diagnóstico avançado para garantir a máxima
           performance e regulagem do seu motor diesel.
@@ -82,17 +52,32 @@ export function Services() {
         {SERVICOS.map((servico, index) => (
           <div
             key={index}
-            className="scroll-reveal group relative rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md"
+            className="scroll-reveal group relative rounded-xl border-2 border-slate-500/75 aspect-square bg-linear-to-t  from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md overflow-hidden group"
           >
-            <div className="mb-4 inline-block rounded-lg bg-raposo-red/5 p-3 text-raposo-red group-hover:bg-raposo-red group-hover:text-white transition-colors">
-              {servico.icon}
+            <div className="aspect-square relative group-hover:blur-md">
+              <picture>
+                {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
+                <source srcSet={servico.ilustraWebp} type="image/webp" />
+                {/* É essa tag que vai receber toda a estilização física e o comportamento visual */}
+                <img
+                  src={servico.ilustraPng}
+                  alt={servico.title}
+                  class="size-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+              <h2 className="absolute float-left bottom-0 w-full text-center text-xl font-bold text-slate-300/90 bg-raposo-dark/80 mb-2 py-2">
+                {servico.title}
+              </h2>
             </div>
-            <h3 className="text-xl font-bold text-raposo-dark mb-2">
-              {servico.title}
-            </h3>
-            <p className="text-sm text-neutral-500 leading-relaxed">
-              {servico.description}
-            </p>
+            <div className="absolute flex flex-col flex-wrap text-center justify-evenly top-0 left-0 size-full aspect-square bg-raposo-dark/99 opacity-0 group-hover:opacity-90 p-6">
+              <h3 className="text-2xl font-bold text-raposo-yellow mb-2">
+                {servico.title}
+              </h3>
+              <p className="text-xl text-slate-200 leading-relaxed">
+                {servico.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%); */
-  --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%);
+  --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%);
+  /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
   --color-raposo-red: #891617;
   --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);
   --color-raposo-yellow: #ffd400;
@@ -70,7 +70,7 @@
     animation-fill-mode: both;
     animation-timeline: --section;
     /* Usa a variável se ela existir, senão o padrão é 0% */
-    animation-range: contain 0% exit 100%;
+    animation-range: entry calc(2% + var(--delay-step, 0%)) contain calc(20% + var(--delay-step, 0%));
   }
 }
 

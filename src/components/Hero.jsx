@@ -1,18 +1,21 @@
-import motorAvif from "../assets/motor.avif";
-import motorWebp from "../assets/motor.webp";
-import motorJpg from "../assets/motor.jpg";
+import motorAvif from "../assets/hero/motor.avif";
+import motorWebp from "../assets/hero/motor.webp";
+import motorJpg from "../assets/hero/motor.jpg";
 
 export function Hero() {
   return (
     <section className="relative bg-raposo-dark px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-12 overflow-y-visible h-[75svh]">
-      <picture className="absolute inset-0  opacity-50 h-[140svh] ">
+      <picture class="absolute inset-0 opacity-50 h-[140svh] w-full block">
+        {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
         <source srcSet={motorAvif} type="image/avif" />
         <source srcSet={motorWebp} type="image/webp" />
+
+        {/* É essa tag que vai receber toda a estilização física e o comportamento visual */}
         <img
           src={motorJpg}
           alt="Motor Diesel"
-          className="h-full w-full object-cover"
-          loading="eager"
+          class="h-full w-full object-cover"
+          loading="lazy"
         />
       </picture>
 
@@ -60,7 +63,7 @@ export function Hero() {
               href="https://wa.me/seunumerodoZap"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md bg-raposo-yellow px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all hover:bg-yellow-400 hover:shadow-xl active:scale-95"
+              className="rounded-md bg-raposo-yellow-washed border-2 border-raposo-red px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all hover:bg-yellow-400 hover:shadow-xl active:scale-95"
             >
               Solicitar Orçamento
             </a>

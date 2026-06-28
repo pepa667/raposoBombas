@@ -3,12 +3,12 @@ import { ZapZap } from "./ZapZap"; // Certifique-se de que o nome e caminho bate
 
 export function Header() {
   return (
-    <header className="sticky top-0  border-0 border-b-2 border-raposo-red/75 bg-raposo-dark transition-none z-10">
+    <header className="sticky top-0  border-0 border-b-2 border-slate-500/50 bg-raposo-dark transition-none z-10">
       <div className="mx-auto max-h-25 flex gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8 *:transition-all *:duration-700">
         {/* CONTAINER DA LOGO */}
         <a
           href="#"
-          className="relative bg-raposo-red-dark w-full min-w-60 max-w-90 px-6 py-4 pt-14 md:pt-10 rounded-md border-2 border-raposo-red/50 drop-shadow-[0_10px_10px_#000f] hover:translate-y-4 group"
+          className="relative bg-raposo-dark w-full min-w-60 max-w-90 px-6 py-4 pt-14 md:pt-10 rounded-md border-2 border-slate-500/50 drop-shadow-[0_10px_10px_#000f] hover:translate-y-4 group"
         >
           {/* <div className="absolute z-[-1  ] bg-linear-to-b from-amber-100/50 to-slate-200/40 size-full m-1  top-0 left-0 "></div> */}
           <LogoRaposo
