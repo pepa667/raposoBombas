@@ -5,7 +5,7 @@ import motorJpg from "../assets/hero/motor.jpg";
 export function Hero() {
   return (
     <section className="relative bg-raposo-dark px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-12 overflow-y-visible h-[75svh]">
-      <picture class="absolute inset-0 opacity-50 h-[140svh] w-full block">
+      <picture class="absolute inset-0 opacity-50 h-[120svh] w-full block">
         {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
         <source srcSet={motorAvif} type="image/avif" />
         <source srcSet={motorWebp} type="image/webp" />
@@ -13,15 +13,15 @@ export function Hero() {
         {/* É essa tag que vai receber toda a estilização física e o comportamento visual */}
         <img
           src={motorJpg}
-          alt="Motor Diesel"
+          alt="Imagem de um Motor Diesel para o plano de fundo"
           class="h-full w-full object-cover"
           loading="lazy"
         />
       </picture>
 
       {/* <div className="absolute inset-0 bg-gradient-to-r from-raposo-dark via-raposo-dark/95 to-transparent "></div> */}
-      <div className="absolute inset-0 bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%  h-[140svh] "></div>
-      <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-[140svh] "></div>
+      <div className="absolute inset-0 bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%  h-[120svh] "></div>
+      <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-[120svh] "></div>
       {/* <div className="absolute -right-10 -top-10 h-96 w-96 rounded-full bg-raposo-red/10 blur-3xl "></div> */}
 
       <div className="relative mx-auto w-[90svw] max-w-6xl *:w-[70%] h-full  ">

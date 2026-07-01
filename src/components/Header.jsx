@@ -18,7 +18,7 @@ export function Header() {
         </a>
 
         {/* NAVEGAÇÃO */}
-        <nav className="hidden md:flex items-center gap-8 text-lg font-semibold text-neutral-400 *:transition-colors *:hover:text-raposo-yellow-washed *:text-[clamp(0.5rem,1.5vw,1rem)]">
+        <nav className="hidden md:flex items-center gap-8 text-lg font-semibold text-neutral-300 *:transition-colors *:hover:text-raposo-yellow-washed *:text-[clamp(0.5rem,1.5vw,1rem)]">
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre&nbsp;Nós</a>
           <a href="#contato">Contato</a>
@@ -30,7 +30,7 @@ export function Header() {
             href="https://wa.me/seunumerodoZap"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-0 lg:hover:gap-3.5 rounded-4xl content-evenly lg:rounded-md bg-raposo-red px-4 py-2 text-lg font-bold text-neutral-400 shadow-md transition-all hover:bg-red-950 hover:shadow-lg hover:border-2 hover:border-raposo-red/50 border-raposo-yellow hover:text-raposo-yellow duration-1000"
+            className="group inline-flex items-center gap-0 lg:hover:gap-3.5 rounded-4xl content-evenly lg:rounded-md bg-raposo-red px-4 py-2 text-lg font-bold text-neutral-200 shadow-md transition-all hover:bg-red-950 hover:shadow-lg hover:border-2 hover:border-raposo-red/50 border-raposo-yellow hover:text-raposo-yellow duration-1000"
           >
             <span className="size-0 lg:size-auto overflow-hidden">Fale&nbsp;Conosco
             </span>

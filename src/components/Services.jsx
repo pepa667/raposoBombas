@@ -1,9 +1,9 @@
-import bicosWebp from "../assets/services/bicos.webp";
-import bombasWebp from "../assets/services/bombas.webp";
-import injecaoWebp from "../assets/services/injecao.webp";
-import bicosPng from "../assets/services/bicos.png";
-import bombasPng from "../assets/services/bombas.png";
-import injecaoPng from "../assets/services/injecao.png";
+import bicosWebp from "../assets/services/bico_photo.webp";
+import bombasWebp from "../assets/services/bomba_photo.webp";
+import injecaoWebp from "../assets/services/modulo_photo.webp";
+import bicosPng from "../assets/services/bico_photo.png";
+import bombasPng from "../assets/services/bomba_photo.png";
+import injecaoPng from "../assets/services/modulo_photo.png";
 
 
 
@@ -35,7 +35,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-4xl border-slate-500/50 border-2"
+      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-md border-slate-500/50 border-2 drop-shadow-[0_10px_10px_#000f]"
     >
       <div className="text-center space-y-16 mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-slate-200/80 sm:text-6xl">
@@ -52,7 +52,7 @@ export function Services() {
         {SERVICOS.map((servico, index) => (
           <div
             key={index}
-            className="scroll-reveal group relative rounded-xl border-2 border-slate-500/75 aspect-square bg-linear-to-t  from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md overflow-hidden group"
+            className="scroll-reveal group relative rounded-md border-2 border-slate-500/75 aspect-square bg-linear-to-t  from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md overflow-hidden group "
           >
             <div className="aspect-square relative group-hover:blur-md">
               <picture>
