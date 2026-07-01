@@ -5,13 +5,12 @@ import bicosPng from "../assets/services/bico_photo.png";
 import bombasPng from "../assets/services/bomba_photo.png";
 import injecaoPng from "../assets/services/modulo_photo.png";
 
-
-
 const SERVICOS = [
   {
     title: "Bombas Injetoras",
     description:
       "Testes, regulagem eletrônica e recondicionamento completo de bombas injetoras convencionais e de alta pressão.",
+    revealDelay: "0",
     ilustraWebp: bombasWebp,
     ilustraPng: bombasPng,
   },
@@ -19,6 +18,7 @@ const SERVICOS = [
     title: "Bicos Injetores",
     description:
       "Análise de vazão, limpeza por ultrassom, calibração precisa e troca de componentes para pulverização perfeita.",
+    revealDelay: "25",
     ilustraWebp: bicosWebp,
     ilustraPng: bicosPng,
   },
@@ -26,6 +26,7 @@ const SERVICOS = [
     title: "Injeção Eletrônica Diesel",
     description:
       "Diagnóstico via scanner computadorizado de sistemas Common Rail e correção de falhas eletrônicas complexas.",
+    revealDelay: "50",
     ilustraWebp: injecaoWebp,
     ilustraPng: injecaoPng,
   },
@@ -52,9 +53,10 @@ export function Services() {
         {SERVICOS.map((servico, index) => (
           <div
             key={index}
-            className="scroll-reveal group relative rounded-md border-2 border-slate-500/75 aspect-square bg-linear-to-t  from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md overflow-hidden group "
+            style={{ "--delay-step": `${servico.revealDelay}%` }}
+            className={`scroll-reveal reveal [--delay-step:var(--delay-step)] show group relative rounded-md border-2 border-slate-500/75 aspect-square bg-linear-to-t from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-translate-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
           >
-            <div className="aspect-square relative group-hover:blur-md">
+            <div className="aspect-square relative group-[&.active]:blur-md">
               <picture>
                 {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
                 <source srcSet={servico.ilustraWebp} type="image/webp" />

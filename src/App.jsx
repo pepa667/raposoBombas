@@ -5,6 +5,8 @@ import { Billboard } from "./components/Billboard";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ZapModal } from "./components/ZapModal";
+import { ScrollReveal } from "./components/ScrollReveal"; // Se criar um arquivo separado
 
 export function App() {
   return (
@@ -16,6 +18,9 @@ export function App() {
       <About />
       <Contact />
       <Footer />
+      {/* Componentes de efeito global */}
+      <ZapModal />
+      <ScrollReveal />
     </div>
   );
 }

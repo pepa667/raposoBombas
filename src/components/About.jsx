@@ -12,13 +12,13 @@ export function About() {
           <h2 className="text-3xl font-bold tracking-tight text-raposo-yellow-washed sm:text-4xl">
             Tradição de mais de 40 anos no mercado diesel
           </h2>
-          <p className="text-neutral-600 leading-relaxed">
+          <p className="text-neutral-200 leading-relaxed">
             Fundada em 1985, a Raposo Bombas Sorocaba construiu sua reputação
             baseada na excelência técnica e na transparência. Ao longo das
             décadas, acompanhamos toda a evolução tecnológica dos motores a
             diesel.
           </p>
-          <p className="text-neutral-600 leading-relaxed">
+          <p className="text-neutral-200 leading-relaxed">
             Do sistema mecânico tradicional aos mais modernos módulos de injeção
             eletrônica de hoje, nossa oficina conta com profissionais
             capacitados para oferecer o diagnóstico exato, evitando gastos
