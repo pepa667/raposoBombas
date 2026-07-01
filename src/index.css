@@ -21,22 +21,6 @@
   }
 }
 
-/* Estado Inicial */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-  will-change: opacity, transform;
-}
-
-/* Estado quando o IntersectionObserver adiciona a classe */
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media (max-width: 640px) {
   /* Breakpoint sm do Tailwind */
   #since {

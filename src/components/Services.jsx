@@ -68,11 +68,11 @@ export function Services() {
                   loading="lazy"
                 />
               </picture>
-              <h2 className="absolute float-left bottom-0 w-full text-center text-xl font-bold text-slate-300/90 bg-raposo-dark/80 mb-2 py-2">
+              <h2 className="absolute reveal float-left bottom-0 w-full text-center text-xl font-bold text-slate-300/90 bg-raposo-dark/80 mb-2 py-2">
                 {servico.title}
               </h2>
             </div>
-            <div className="absolute flex flex-col flex-wrap text-center justify-evenly top-0 left-0 size-full aspect-square bg-raposo-dark/99 opacity-0 group-hover:opacity-90 p-6">
+            <div className="absolute reveal  flex flex-col flex-wrap text-center justify-evenly top-0 left-0 size-full aspect-square bg-raposo-dark/99 opacity-0 [&:is(:hover,.active)]:opacity-90 p-6">
               <h3 className="text-2xl font-bold text-raposo-yellow mb-2">
                 {servico.title}
               </h3>

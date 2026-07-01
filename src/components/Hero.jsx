@@ -64,14 +64,14 @@ export function Hero() {
               href="https://wa.me/seunumerodoZap"
               target="_blank"
               rel="noopener noreferrer"
-              className=" whatsapp-btn vendas rounded-md bg-raposo-yellow-washed border-2 border-raposo-red px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all hover:bg-yellow-400 hover:shadow-xl active:scale-95"
+              className=" whatsapp-btn reveal vendas rounded-md bg-raposo-yellow-washed border-2 border-raposo-red px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all [&:is(:hover,.active)]:bg-yellow-400 [&:is(:hover,.active)]:shadow-xl "
               data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
             >
               Solicitar Orçamento
             </a>
             <a
               href="#servicos"
-              className="rounded-md border border-neutral-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-raposo-red/60 hover:border-raposo-yellow hover:text-raposo-yellow"
+              className="rounded-md reveal border border-neutral-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all [&:is(:hover,.active)]:bg-raposo-red/60 [&:is(:hover,.active)]:border-raposo-yellow [&:is(:hover,.active)]:text-raposo-yellow"
             >
               Ver Serviços
             </a>

@@ -31,11 +31,12 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn group inline-flex items-center gap-0 lg:hover:gap-3.5 rounded-4xl content-evenly lg:rounded-md bg-raposo-red px-4 py-2 text-lg font-bold text-neutral-200 shadow-md transition-all hover:bg-red-950 hover:shadow-lg hover:border-2 hover:border-raposo-red/50 border-raposo-yellow hover:text-raposo-yellow duration-1000"
-          data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
+            data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
           >
-            <span className="size-0 lg:size-auto overflow-hidden">Fale&nbsp;Conosco
+            <span className="reveal size-0 lg:size-auto overflow-hidden">
+              Fale&nbsp;Conosco
             </span>
-            <ZapZap className="size-10 lg:size-0 fill-raposo-yellow group-hover:size-10 transition-all duration-500" />
+            <ZapZap className="reveal size-10 lg:size-0 fill-raposo-yellow group-hover:size-10 transition-all duration-500" />
           </a>
         </div>
       </div>
