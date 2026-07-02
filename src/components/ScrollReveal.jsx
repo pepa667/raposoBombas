@@ -24,9 +24,9 @@ export function ScrollReveal() {
       },
       {
         // Dispara quando 10% do elemento estiver visível na tela
-        threshold: 1,
+        threshold: 0.4,
         // Define uma margem para começar a carregar um pouco antes ou depois de entrar no viewport
-        rootMargin: "-20% 0px",
+        rootMargin: "-40% 0px",
       },
     );
 

@@ -25,7 +25,7 @@ export function About() {
             desnecessários.
           </p>
         </div>
-        <div className="relative rounded-2xl bg-raposo-dark p-8 text-white shadow-xl lg:p-12 overflow-hidden scroll-reveal [--delay-step:4] group  border-2 border-slate-500/75 aspect-square bg-linear-to-t from-slate-900/40 to-slate-500/40  transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md">
+        <div className="relative rounded-2xl bg-raposo-dark p-8 text-white shadow-xl lg:p-12 overflow-hidden scroll-reveal [--delay-step:20%] group  border-2 border-slate-500/75 aspect-square bg-linear-to-t from-slate-900/40 to-slate-500/40  transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md">
           <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-raposo-yellow/5 blur-2xl "></div>
           <h3 className="text-2xl font-bold text-raposo-yellow mb-4">
             Por que nos escolher?

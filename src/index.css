@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%);
+  --color-raposo-dark: hsl(from var(--color-zinc-900) h 20% 15%);
+  /* --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
   --color-raposo-red: #891617;
   --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);

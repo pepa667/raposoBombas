@@ -27,7 +27,7 @@ export function Hero() {
       <div className="relative mx-auto w-[90svw] max-w-6xl *:w-[70%] h-auto md:h-full ">
         <div
           id="since"
-          className="absolute roll-down mt-16 md:mt-0 top-0 right-0 md:right-8 max-w-fit scale-125 
+          className="absolute roll-down mt-16 md:mt-0 md:top-32 right-0 md:right-8 max-w-fit scale-125 
           before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2
           before:-translate-y-1/2 before:size-20 before:rotate-45 before:border before:border-raposo-yellow before:   before:bg-raposo-red-dark   before:-z-10  
         "

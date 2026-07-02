@@ -1,41 +1,59 @@
-import bancadaWebp from "../assets/billboard/bancada.webp";
-import bancadaPng from "../assets/billboard/bancada.png";
+import { useEffect } from "preact/hooks";
+import motorMp4 from "../assets/billboard/motor.mp4";
 
+window.addEventListener("scroll", () => {
+  const bbTitle = document.getElementById("bbTitle");
+  if (!bbTitle) return; // Evita erros caso o elemento não exista na tela
+
+  // Posição do elemento em relação ao topo da tela visível
+  const elementoTopo = bbTitle.getBoundingClientRect().top;
+
+  // Linha imaginária no meio exato da tela
+  const meioDaTela = window.innerHeight / 1.5;
+
+  // Se o topo do elemento passou do meio da tela (ficou menor que o meio)
+  if (elementoTopo < meioDaTela) {
+    bbTitle.classList.add("opacity-100");
+  } else {
+    bbTitle.classList.remove("opacity-100");
+  }
+});
 
 export function Billboard() {
   return (
-    <section class="relative bg-linear-to-tl mt-36 from-raposo-red-dark to-raposo-red px-4 py-12 text-white sm:px-6 lg:px-8 drop-shadow-[0_15px_15px_#0008] border-b-2 border-slate-500/50 overflow-hidden">
-      {/* Overlay escuro de fundo para dar contraste */}
-      <div class="absolute inset-0 bg-slate-900/60 pointer-events-none"></div>
+    <section
+      /* REMOVIDO o drop-shadow daqui para não matar o fixed do filho! Mantive o border. */
+      className="billboard-title relative flex flex-col-reverse h-[60svh] mt-24 overflow-hidden "
+      style={{ clipPath: "inset(0 0 0 0)" }}
+    >
+      <div className="fixed top-[5svh] left-0 w-full h-svh -z-10 pointer-events-none">
+        <video
+          src={motorMp4}
+          autoPlay
+          muted
+          loop
+          playsInline
+          id="background-video"
+          /* Limpei as classes: isso aqui já faz o vídeo cobrir a tela perfeitamente */
+          className="absolute md:top-[10svh] inset-0 w-full h-[90svh] object-cover md:object-contain opacity-90 mix-blend-multiply"
+        />
 
-      <div class="absolute inset-0 mx-auto max-w-6xl  ">
-
-        <picture class="absolute right-0 top-0 max-w-fit h-full opacity-70 mirro">
-          {/* Usando os assets que estruturamos */}
-          <source srcSet={bancadaWebp} type="image/webp" />
-          <img
-            src={bancadaPng}
-            alt="Bomba Injetora Diesel de Alta Precisão"
-            class="w-full h-full object-contain"
-            loading="lazy"
-          />
-        </picture>
+        <div className="absolute inset-0 bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%  h-svh"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-svh"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-zinc-950 to-zinc-950/30  "></div>
       </div>
 
-      <div class="relative mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center h-[30svh]">
-
-        {/* BLOCO DE TEXTO (Ocupa 7 colunas no desktop) */}
-        <div class="text-center md:text-right md:col-span-7 space-y-4 z-10">
-          <h2 class="text-3xl font-extrabold tracking-tight sm:text-6xl text-raposo-yellow font-serif mb-16">
-            Precisão que move o seu negócio.
-          </h2>
-          <p class="max-w-xl mx-auto md:mx-0 text-lg font-medium text-red-100 sm:text-2xl leading-relaxed">
-            Diagnóstico avançado e tecnologia de ponta para sistemas de injeção diesel desde 1985.
-          </p>
-        </div>
-
-        {/* BLOCO DA IMAGEM / ASSET (Ocupa 5 colunas no desktop) */}
-
+      <div
+        id="bbTitle"
+        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent rounded-xl border-slate-500/50 border-2 opacity-0"
+      >
+        <h2 className="text-3xl font-bold tracking-tight sm:text-6xl text-raposo-yellow  mb-8">
+          Precisão que move o seu negócio.
+        </h2>
+        <p className="text-lg font-medium text-raposo-yellow-washed sm:text-2xl leading-relaxed">
+          Diagnóstico avançado e tecnologia de ponta para sistemas de injeção
+          diesel desde 1985.
+        </p>
       </div>
     </section>
   );
