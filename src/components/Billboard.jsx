@@ -23,7 +23,7 @@ export function Billboard() {
   return (
     <section
       /* REMOVIDO o drop-shadow daqui para não matar o fixed do filho! Mantive o border. */
-      className="billboard-title relative flex flex-col-reverse h-[60svh] mt-24 overflow-hidden "
+      className="showReveal billboard-title relative flex flex-col-reverse h-[60svh] mt-24 overflow-hidden bg-slate-800 "
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
       <div className="fixed top-[5svh] left-0 w-full h-svh -z-10 pointer-events-none">
@@ -40,12 +40,12 @@ export function Billboard() {
 
         <div className="absolute inset-0 bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%  h-svh"></div>
         <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-svh"></div>
-        <div className="absolute inset-0 bg-linear-to-t from-zinc-950 to-zinc-950/30  "></div>
+        <div className="absolute inset-0 bg-linear-to-t from-raposo-dark-950 to-raposo-dark-950/30  "></div>
       </div>
 
       <div
         id="bbTitle"
-        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent rounded-xl border-slate-500/50 border-2 opacity-0"
+        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent rounded-xl opacity-0"
       >
         <h2 className="text-3xl font-bold tracking-tight sm:text-6xl text-raposo-yellow  mb-8">
           Precisão que move o seu negócio.

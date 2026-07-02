@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-raposo-dark: hsl(from var(--color-zinc-900) h 20% 15%);
-  /* --color-raposo-dark: hsl(from var(--color-slate-900) h 20% 15%); */
+  /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
+  /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
   --color-raposo-red: #891617;
   --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);
   --color-raposo-yellow: #ffd400;
   --color-raposo-yellow-washed: #fbd471;
   --font-sans: "Inter", sans-serif;
+  --color-raposo-dark-50: oklch(0.984 0.0015 247.858);
+  --color-raposo-dark-100: oklch(0.968 0.0035 247.896);
+  --color-raposo-dark-200: oklch(0.929 0.0065 255.508);
+  --color-raposo-dark-300: oklch(0.869 0.011 252.894);
+  --color-raposo-dark-400: oklch(0.704 0.02 256.788);
+  --color-raposo-dark-500: oklch(0.554 0.023 257.417);
+  --color-raposo-dark-600: oklch(0.446 0.0215 257.281);
+  --color-raposo-dark-700: oklch(0.372 0.022 257.287);
+  --color-raposo-dark-800: oklch(0.279 0.0205 260.031);
+  --color-raposo-dark-900: oklch(0.208 0.021 265.755);
+  --color-raposo-dark-950: oklch(0.129 0.021 264.695);
+  --color-raposo-dark: oklch(0.129 0.021 264.695);
 }
 @layer base {
   html {
@@ -88,4 +100,8 @@
     opacity: 1;
     transform: none;
   }
+}
+
+.showAxtive {
+  width: 100svw !important;
 }

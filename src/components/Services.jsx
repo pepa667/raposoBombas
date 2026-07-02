@@ -5,6 +5,24 @@ import bicosPng from "../assets/services/bico_photo.png";
 import bombasPng from "../assets/services/bomba_photo.png";
 import injecaoPng from "../assets/services/modulo_photo.png";
 
+window.addEventListener("scroll", () => {
+  const bbTitle = document.getElementById("progressBar");
+  if (!bbTitle) return; // Evita erros caso o elemento não exista na tela
+
+  // Posição do elemento em relação ao topo da tela visível
+  const elementoTopo = bbTitle.getBoundingClientRect().top;
+
+  // Linha imaginária no meio exato da tela
+  const meioDaTela = window.innerHeight / 1.5;
+
+  // Se o topo do elemento passou do meio da tela (ficou menor que o meio)
+  if (elementoTopo < meioDaTela) {
+    bbTitle.classList.add("before:w-[90svw]");
+  } else {
+    bbTitle.classList.remove("before:w-[90svw]");
+  }
+});
+
 const SERVICOS = [
   {
     title: "Bombas Injetoras",
@@ -36,14 +54,17 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-md border-slate-500/50 border-2 drop-shadow-[0_10px_10px_#000f]"
+      className=" w-[90svw] max-w-6xl px-4 py-16 mb-10 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark bg-linear-to-t from-black/70 to-transparent relative rounded-md border-raposo-dark-500/50 drop-shadow-[0_10px_10px_#000f]"
     >
-      <div className="text-center space-y-16 mb-16">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-200/80 sm:text-6xl">
+      <div className="text-center space-y-16 mb-16 min-w-full">
+        <h2 className="text-3xl font-bold tracking-tight text-raposo-dark-200/80 sm:text-6xl">
           Nossos Serviços Especializados
         </h2>
-        <div className="relative mx-auto h-1 w-64 bg-raposo-yellow rounded-full before:content-[''] before:max-w-[80svw] before:w-4xl before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-translate-y-1/2 before:top-[50%]   "></div>
-        <p className="mx-auto max-w-2xl text-neutral-400 text-2xl">
+        <div
+          id="progressBar"
+          className="relative mx-auto before:transition-all before:duration-2000 h-1 w-64 bg-raposo-yellow rounded-full before:content-[''] before:w-0 before:max-w-5xl before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-tranlate before:top-[50%]   "
+        ></div>
+        <p className="mx-auto max-w-2xl text-raposo-dark-400 text-2xl">
           Equipamentos de diagnóstico avançado para garantir a máxima
           performance e regulagem do seu motor diesel.
         </p>
@@ -54,7 +75,7 @@ export function Services() {
           <div
             key={index}
             style={{ "--delay-step": `${servico.revealDelay}%` }}
-            className={`scroll-reveal reveal [--delay-step:var(--delay-step)] show group relative rounded-md border-2 border-slate-500/75 aspect-square bg-linear-to-t from-slate-900/40 to-slate-500/40 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-translate-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
+            className={`scroll-reveal reveal [--delay-step:var(--delay-step)] show group relative rounded-md  border-raposo-dark-500/75 aspect-square bg-linear-to-t from-raposo-dark-900/40 to-raposo-dark-500/40 p-6 shadow-sm transition-all duration-300 hover:-tranraposo-dark-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-tranraposo-dark-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
           >
             <div className="aspect-square relative group-[&.active]:blur-md">
               <picture>
@@ -68,7 +89,7 @@ export function Services() {
                   loading="lazy"
                 />
               </picture>
-              <h2 className="absolute reveal float-left bottom-0 w-full text-center text-xl font-bold text-slate-300/90 bg-raposo-dark/80 mb-2 py-2">
+              <h2 className="absolute reveal float-left bottom-0 w-full text-center text-xl font-bold text-raposo-dark-300/90 bg-raposo-dark/80 mb-2 py-2">
                 {servico.title}
               </h2>
             </div>
@@ -76,7 +97,7 @@ export function Services() {
               <h3 className="text-2xl font-bold text-raposo-yellow mb-2">
                 {servico.title}
               </h3>
-              <p className="text-xl text-slate-200 leading-relaxed">
+              <p className="text-xl text-raposo-dark-200 leading-relaxed">
                 {servico.description}
               </p>
             </div>
