@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-raposo-dark text-raposo-dark-400 text-xs py-8 px-4 border-t border-raposo-dark-800">
+    <footer className="bg-raposo-dark-800 text-raposo-dark-400 text-xs py-8 px-4 border-t border-raposo-dark-800">
       <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="font-bold text-white tracking-wider">

@@ -15,17 +15,17 @@ export function Header() {
   return (
     <header
       id="header"
-      className="sticky float-start top-0 min-w-svw border-raposo-dark-500/50 bg-raposo-dark transition-all duration-1000 z-10"
+      className="sticky float-start top-0 w-svw border-raposo-dark-500/50 bg-raposo-dark-800 transition-all duration-1000 z-10"
     >
       <div className="mx-auto max-h-25 flex gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8 transition-all duration-700">
         {/* CONTAINER DA LOGO */}
         <a
           href="#"
-          className="relative bg-raposo-dark w-fit max-w-[60svw] px-6  rounded-md  border-raposo-dark-500/50 drop-shadow-[0_10px_10px_#000f] hover:tranraposo-dark-y-4 group"
+          className="relative bg-raposo-dark-800 w-fit max-w-[60svw] px-6  rounded-md  border-raposo-dark-500/50 drop-shadow-[0_10px_10px_#000f] hover:translate-y-4 group"
         >
           {/* <div className="absolute z-[-1  ] bg-linear-to-b from-amber-100/50 to-raposo-dark-200/40 size-full m-1  top-0 left-0 "></div> */}
           <LogoRaposo
-            className="aspect-4/1  transition-all h-20  max-md:in-[.shrunk]:h-12 max-w-full duration-500 group-hover:tranraposo-dark-y-4"
+            className="aspect-4/1  transition-all h-20  max-md:in-[.shrunk]:h-12 max-w-full duration-500 group-hover:translate-y-4"
             lightText={false} // Mantém o vinho padrão e o amarelo originais. Mude para true se o fundo pedir texto claro.
           />
         </a>

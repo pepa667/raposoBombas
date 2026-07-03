@@ -2,7 +2,7 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="border-t border-raposo-dark-200 bg-raposo-dark-100 px-4 py-16 sm:px-6 lg:px-8"
+      className="border-t border-raposo-dark-200 bg-raposo-dark-800-100 px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-12">
         <div className="lg:col-span-5 space-y-6">
