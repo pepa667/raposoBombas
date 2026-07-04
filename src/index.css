@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --dark-hue: 265;
-  --dark-chroma: 0.012;
+  --dark-hue: 29;
+  --dark-chroma: 0.01;
 
   /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
   --color-raposo-red: #891617;
   --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);
-  --color-raposo-yellow: #ffd400;
+  /* --color-raposo-yellow: #ffd400; */
+  --color-raposo-yellow: var(--color-amber-400);
   --color-raposo-yellow-washed: #fbd471;
   --font-sans: "Inter", sans-serif;
   /* --color-raposo-dark-50: oklch(0.984 0.0015 247.858);
@@ -33,8 +34,8 @@
   --color-raposo-dark-600: oklch(0.446 var(--dark-chroma) var(--dark-hue));
   --color-raposo-dark-700: oklch(0.372 var(--dark-chroma) var(--dark-hue));
   --color-raposo-dark-800: oklch(0.279 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-900: oklch(0.208 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-950: oklch(0.129 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-900: oklch(0.208 calc(var(--dark-chroma) + 0.01) var(--dark-hue));
+  --color-raposo-dark-950: oklch(0.129 calc(var(--dark-chroma) + 0.03) var(--dark-hue));
   --color-raposo-dark: oklch(0.129 0.021 264.695);
 }
 @layer base {

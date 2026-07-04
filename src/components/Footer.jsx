@@ -28,7 +28,7 @@ export function Footer() {
             class="relative group font-black text-raposo-yellow hover:text-raposo-dark-800 transition-colors duration-300 px-2 py-1 rounded bg-amber-500/5 border border-amber-500/10 hover:border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.05)] hover:shadow-[0_0_20px_rgba(245,158,11,0.2)]"
           >
             <span class="relative z-10">[ PEPA.DEV.br ]</span>
-            <span class="absolute inset-0 bg-raposo-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-sm -z-0"></span>
+            <span class="absolute inset-0 bg-raposo-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left  -z-0"></span>
           </a>
         </div>
       </div>

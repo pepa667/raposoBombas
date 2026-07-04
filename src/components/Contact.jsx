@@ -7,11 +7,11 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="border-t border-raposo-dark-700 bg-raposo-dark-900 bg-linear-to-b  from-black/50 from-0% to-transparent to-15% px-4 py-16 sm:px-6 lg:px-8 "
+      className="border-t border-raposo-yellow/60 bg-raposo-red bg-linear-to-b  from-black/98 via-raposo-dark-900/93 via-3% from-0% to-raposo-dark-800 bg-blend-multiply px-4 py-16 sm:px-6 lg:px-8 "
     >
       <div className="relative mx-auto max-w-7xl flex flex-col-reverse xl:flex-row items-center justify-evenly">
         <div className="scroll-reveal  max-xl:[--reveal-y:200px] xl:[--reveal-x:-200px] [--delay-step:50%] w-[80svw] xl:w-4/12 -mt-16 xl:mt-0  h-fit z-10 ">
-          <div className="xl:w-[140%]  flex flex-col gap-4 px-12 py-8 bg-raposo-red-dark  bg-linear-to-t  from-raposo-dark-900/60 to-raposo-dark-400/20 bg-blend-multiply drop-shadow-[0_4px_6px_#000b] xl:drop-shadow-[4px_0_6px_#000b] rounded-2xl border-2 max-xl:border-t max-xl:border-b-4 xl:border-r xl:border-l-8 border-raposo-yellow/50">
+          <div className="xl:w-[140%]  flex flex-col gap-4 px-12 py-8 bg-raposo-red-dark  bg-linear-to-t  from-raposo-dark-900/60 to-raposo-dark-400/20 bg-blend-multiply drop-shadow-[0_4px_6px_#000b] xl:drop-shadow-[4px_0_6px_#000b]  border-2 max-xl:border-t max-xl:border-b-4 xl:border-r xl:border-l-8 border-raposo-yellow/50">
             <h2 className="text-4xl font-bold tracking-tight text-raposo-yellow">
               Fale Conosco
             </h2>
@@ -52,8 +52,8 @@ export function Contact() {
             </div>
           </div>
         </div>
-        <div className="relative max-w-[90svw] w-[90svw] scroll-reveal max-xl:[--reveal-y:200px] xl:[--reveal-x:200px] [--delay-step:20%] transition-all xl:w-8/12 h-auto rounded-xl border-2 max-xl:border-t max-xl:border-b-8 xl:border-l xl:border-r-8 border-raposo-yellow/50">
-          <picture class="   h-auto w-full block px-2 py-4 sm:px-4  bg-raposo-dark-500 bg-linear-to-t from-raposo-dark-900 to-raposo-dark-500 bg-blend-multiply rounded-xl  drop-shadow-[0_4px_6px_#000b] xl:drop-shadow-[4px_0_6px_#000b]">
+        <div className="relative max-w-[90svw] w-[90svw] scroll-reveal max-xl:[--reveal-y:200px] xl:[--reveal-x:200px] [--delay-step:20%] transition-all xl:w-8/12 h-auto  border-2 max-xl:border-t max-xl:border-b-8 xl:border-l xl:border-r-8 border-raposo-yellow">
+          <picture class="   h-auto w-full block px-2 py-4 sm:px-4  bg-raposo-yellow bg-linear-to-t from-raposo-dark-950 to-raposo-dark-500 bg-blend-multiply   drop-shadow-[0_4px_6px_#000b] xl:drop-shadow-[4px_0_6px_#000b]">
             {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
             <source srcSet={fachadaWebp} type="image/webp" />
 

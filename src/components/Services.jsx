@@ -53,17 +53,17 @@ const SERVICOS = [
 export function Services() {
   return (
     <section id="servicos" className="relative">
-      <div className="w-full h-32 absolute -bottom-28 bg-radial-[100%_50%_at_50%_130%,var(--color-raposo-dark-600)_0%_50%,transparent_95%,transparent] border-b-2 border-raposo-dark-600 "></div>
-      <div className=" w-[90svw] max-w-6xl px-4 py-16 mb-28 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark-800 bg-linear-to-t from-black/35 to-transparent relative rounded-md  drop-shadow-[0_10px_10px_#000f]">
+      <div className="w-full h-32 absolute -bottom-28 bg-radial-[100%_50%_at_50%_130%,var(--color-raposo-yellow)_0%_50%,transparent_85%,transparent] border-b-2 border-raposo-dark-600 "></div>
+      <div className=" w-[90svw] max-w-6xl px-4 py-16 mb-28 mx-auto sm:px-6 lg:px-8 lg:py-24 border-y-20 border-raposo-yellow bg-raposo-red bg-linear-to-t from-black/80 to-raposo-dark-600 relative   drop-shadow-[0_10px_10px_#000f] bg-blend-multiply">
         <div className="text-center space-y-16 mb-16 min-w-full">
-          <h2 className="text-3xl font-bold tracking-tight text-raposo-dark-200/80 sm:text-6xl">
+          <h2 className="text-3xl font-bold tracking-tight text-raposo-yellow sm:text-6xl">
             Nossos Serviços Especializados
           </h2>
           <div
             id="progressBar"
-            className="relative mx-auto before:transition-all before:duration-2000 h-1 w-[30%] bg-raposo-yellow rounded-full before:content-[''] before:w-0 before:max-w-5xl before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-tranlate before:top-[50%]   "
+            className="relative mx-auto before:transition-all before:duration-2000 h-1 w-[30%] bg-raposo-yellow  before:content-[''] before:w-0 before:max-w-5xl before:h-px before:bg-raposo-yellow before:absolute  before:-translate-x-1/2 before:-tranlate before:top-[50%]   "
           ></div>
-          <p className="mx-auto max-w-2xl text-raposo-dark-400 text-2xl">
+          <p className="mx-auto max-w-2xl text-raposo-yellow-washed text-2xl">
             Equipamentos de diagnóstico avançado para garantir a máxima
             performance e regulagem do seu motor diesel.
           </p>
@@ -74,7 +74,7 @@ export function Services() {
             <div
               key={index}
               style={{ "--delay-step": `${servico.revealDelay}%` }}
-              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] revealY show group relative rounded-md  border-raposo-dark-500/75 aspect-square bg-linear-to-t from-raposo-dark-900/40 to-raposo-dark-500/40 p-6 shadow-sm transition-all duration-300 hover:-tranraposo-dark-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-tranraposo-dark-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
+              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] [--reveal-y:-300px] show group relative    border-2 border-t border-b-8 border-raposo-yellow aspect-square bg-raposo-red bg-linear-to-t from-raposo-dark-600 to-raposo-dark-900 bg-blend-multiply p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red hover:shadow-md [&.active]:-translate-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
             >
               <div className="aspect-square relative group-[&.active]:blur-md">
                 <picture>
@@ -88,11 +88,11 @@ export function Services() {
                     loading="lazy"
                   />
                 </picture>
-                <h2 className="absolute reveal float-left bottom-0 w-full text-center text-xl font-bold text-raposo-dark-300/90 bg-raposo-dark/80 mb-2 py-2">
+                <h2 className="absolute reveal float-left bottom-0 w-full text-center text-xl font-bold text-raposo-dark-300/90 bg-raposo-dark-950 mb-2 py-2">
                   {servico.title}
                 </h2>
               </div>
-              <div className="absolute reveal  flex flex-col flex-wrap text-center justify-evenly top-0 left-0 size-full aspect-square bg-raposo-dark/99 opacity-0 [&:is(:hover,.active)]:opacity-90 p-6">
+              <div className="absolute reveal  flex flex-col flex-wrap text-center justify-evenly top-0 left-0 size-full aspect-square bg-raposo-red bg-linear-to-t from-black/80 to-raposo-dark-600 bg-blend-multiply  opacity-0 [&:is(:hover,.active)]:opacity-90 p-6">
                 <h3 className="text-2xl font-bold text-raposo-yellow mb-2">
                   {servico.title}
                 </h3>

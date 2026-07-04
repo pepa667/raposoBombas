@@ -67,7 +67,7 @@ export function ZapModal() {
       ></div>
 
       <div
-        className={`relative z-10 w-full max-w-md rounded-2xl border border-raposo-dark-800 bg-raposo-dark-900 p-6 shadow-2xl transition-transform duration-300 ${
+        className={`relative z-10 w-full max-w-md  border border-raposo-dark-800 bg-raposo-dark-900 p-6 shadow-2xl transition-transform duration-300 ${
           isOpen ? "translate-y-0 scale-100" : "translate-y-4 scale-95"
         }`}
       >
@@ -111,7 +111,7 @@ export function ZapModal() {
         <p className="mb-1 text-xs font-semibold tracking-widest text-raposo-dark-500 uppercase">
           Prévia da mensagem
         </p>
-        <div className="mb-6 rounded-xl border border-raposo-dark-700 bg-raposo-dark-950 px-4 py-3">
+        <div className="mb-6  border border-raposo-dark-700 bg-raposo-dark-950 px-4 py-3">
           <p className="text-sm leading-relaxed text-raposo-dark-300">
             {message}
           </p>
@@ -120,7 +120,7 @@ export function ZapModal() {
         <div className="flex gap-3">
           <button
             onClick={closeModal}
-            className="flex-1 rounded-lg border border-raposo-dark-700 px-4 py-3 text-sm font-bold tracking-wider text-raposo-dark-400 uppercase transition-colors hover:bg-raposo-dark-800-800 hover:text-raposo-dark-200"
+            className="flex-1  border border-raposo-dark-700 px-4 py-3 text-sm font-bold tracking-wider text-raposo-dark-400 uppercase transition-colors hover:bg-raposo-dark-800-800 hover:text-raposo-dark-200"
           >
             Cancelar
           </button>
@@ -129,7 +129,7 @@ export function ZapModal() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setTimeout(closeModal, 300)}
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500"
+            className="flex flex-1 items-center justify-center gap-2  bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500"
           >
             <svg
               className="h-5 w-5 shrink-0"
