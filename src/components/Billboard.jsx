@@ -26,8 +26,8 @@ export function Billboard() {
       className="showReveal billboard-title relative flex flex-col-reverse h-[60svh] overflow-hidden bg-raposo-dark-800  "
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
-      <div className="w-full h-24 absolute top-0 bg-linear-to-b from-raposo-dark-900 to-transparent border-t-2 border-raposo-dark-500"></div>
-      <div className="w-full h-50 absolute bottom-0 bg-linear-to-b from-transparent to-raposo-dark-700 via-raposo-dark-700/40 via-80% border-b-2 border-raposo-dark-900 "></div>
+      <div className="w-full h-32 absolute top-0 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-dark-950)_0%_50%,color-mix(in_srgb,var(--color-raposo-dark-950)_20%,transparent)_90%,transparent] border-t-2 border-raposo-dark-600"></div>
+      <div className="w-full h-32 absolute bottom-0 bg-radial-[100%_50%_at_50%_130%,var(--color-raposo-dark-400)_0%_50%,var(--color-raposo-dark-800)_80%,transparent] border-b-2 border-raposo-dark-900 mix-blend-luminosity"></div>
 
       <div className="fixed top-[5svh] left-0 w-full h-svh -z-10 pointer-events-none">
         <video
@@ -48,7 +48,7 @@ export function Billboard() {
 
       <div
         id="bbTitle"
-        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark-800 bg-linear-to-t from-black/70 to-transparent rounded-xl opacity-0"
+        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark-800 bg-linear-to-t from-black/70 to-transparent rounded-md opacity-0"
       >
         <h2 className="text-3xl font-bold tracking-tight sm:text-6xl text-raposo-yellow  mb-8">
           Precisão que move o seu negócio.

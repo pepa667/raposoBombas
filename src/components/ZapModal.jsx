@@ -52,7 +52,7 @@ export function ZapModal() {
   return (
     <div
       id="whatsapp-modal"
-      className={`fixed inset-0 z-[200] flex items-end justify-center p-4 transition-opacity duration-300 sm:items-center ${
+      className={`fixed inset-0 z-200 flex items-end justify-center p-4 transition-opacity duration-300 sm:items-center ${
         isOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -63,11 +63,11 @@ export function ZapModal() {
     >
       <div
         onClick={closeModal}
-        className="absolute inset-0 bg-raposo-dark-800-950/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-raposo-dark-950/80 backdrop-blur-sm"
       ></div>
 
       <div
-        className={`relative z-10 w-full max-w-md rounded-2xl border border-raposo-dark-800 bg-raposo-dark-800-900 p-6 shadow-2xl transition-transform duration-300 ${
+        className={`relative z-10 w-full max-w-md rounded-2xl border border-raposo-dark-800 bg-raposo-dark-900 p-6 shadow-2xl transition-transform duration-300 ${
           isOpen ? "translate-y-0 scale-100" : "translate-y-4 scale-95"
         }`}
       >
@@ -111,7 +111,7 @@ export function ZapModal() {
         <p className="mb-1 text-xs font-semibold tracking-widest text-raposo-dark-500 uppercase">
           Prévia da mensagem
         </p>
-        <div className="mb-6 rounded-xl border border-raposo-dark-700 bg-raposo-dark-800-950 px-4 py-3">
+        <div className="mb-6 rounded-xl border border-raposo-dark-700 bg-raposo-dark-950 px-4 py-3">
           <p className="text-sm leading-relaxed text-raposo-dark-300">
             {message}
           </p>

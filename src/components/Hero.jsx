@@ -4,7 +4,7 @@ import motorJpg from "../assets/hero/motor.jpg";
 
 export function Hero() {
   return (
-    <section className="relative bg-raposo-dark-800 px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-12 overflow-y-visible min-h-fit h-svh md:h-[75svh]">
+    <section className="relative bg-raposo-dark-800 px-4 py-6 text-white sm:px-6 lg:px-8 lg:py-12 overflow-y-visible min-h-fit h-[50svh] md:h-[75svh]">
       <picture class="absolute inset-0 opacity-50 h-[120svh] w-full block">
         {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
         <source srcSet={motorAvif} type="image/avif" />
@@ -25,12 +25,17 @@ export function Hero() {
 
       {/* <div className="absolute -right-10 -top-10 h-96 w-96 rounded-full bg-raposo-red/10 blur-3xl "></div> */}
 
-      <div className="relative mx-auto top-16 sm:top-0 w-[90svw] max-w-6xl *:w-[70%] h-auto md:h-full ">
+      <div
+        ref={(el) => el && setTimeout(() => el.classList.add("activeAll"), 10)}
+        id="hero"
+        className="relative mx-auto top-0 w-[90svw] max-w-6xl md:*:w-[70%] h-[70svh] md:h-full flex flex-col flex-wrap justify-around
+      [&.activeAll_>_*]:translate-x-0 [&.activeAll_>_*]:opacity-100 transition-all *>:duration-500"
+      >
         <div
           id="since"
-          className="absolute roll-down mt-16 md:mt-0 md:top-24 right-0 md:right-8 max-w-fit scale-125 
+          className="absolute roll-down md:mt-0 md:top-24 right-0 md:right-8 max-w-fit scale-125 
           before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2
-          before:-translate-y-1/2 before:size-20 before:rotate-45 before:border before:border-raposo-yellow before:   before:bg-raposo-red-dark   before:-z-10  
+          before:-translate-y-1/2 before:size-20 before:rotate-45 before:border before:border-raposo-yellow before:   before:bg-raposo-red-dark   before:-z-10 
 
         "
         >
@@ -51,33 +56,31 @@ export function Hero() {
             <span className="text-xs">em Sorocaba</span>
           </div>
         </div>
-        <div className="scroll-reveal relative h-[90svh] md:h-full flex flex-col flex-wrap justify-around">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
-            Especialistas em{" "}
-            <span className="text-raposo-yellow">Injeção&nbsp;Diesel</span>
-          </h1>
-          <p className="scroll-reveal max-w-xl text-base text-raposo-dark-300 sm:text-lg">
-            Manutenção de alta precisão para bicos, bombas injetoras e sistemas
-            de injeção eletrônica em motores a diesel. Traga força e economia de
-            volta ao seu veículo.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <a
-              href="https://wa.me/seunumerodoZap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" whatsapp-btn reveal vendas rounded-md bg-raposo-yellow-washed border-2 border-raposo-red px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all [&:is(:hover,.active)]:bg-yellow-400 [&:is(:hover,.active)]:shadow-xl "
-              data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
-            >
-              Solicitar Orçamento
-            </a>
-            <a
-              href="#servicos"
-              className="rounded-md reveal border border-raposo-dark-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all [&:is(:hover,.active)]:bg-raposo-red/60 [&:is(:hover,.active)]:border-raposo-yellow [&:is(:hover,.active)]:text-raposo-yellow"
-            >
-              Ver Serviços
-            </a>
-          </div>
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white z-10 -translate-x-100 opacity-0 transition-all delay-100">
+          Especialistas em{" "}
+          <span className="text-raposo-yellow">Injeção&nbsp;Diesel</span>
+        </h1>
+        <p className="-translate-x-100 opacity-0 delay-200 max-w-xl text-base text-raposo-dark-300 sm:text-lg z-10">
+          Manutenção de alta precisão para bicos, bombas injetoras e sistemas de
+          injeção eletrônica em motores a diesel. Traga força e economia de
+          volta ao seu veículo.
+        </p>
+        <div className=" -translate-x-100 opacity-0 delay-300 flex flex-wrap gap-4 pt-2 z-10">
+          <a
+            href="https://wa.me/seunumerodoZap"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" whatsapp-btn reveal vendas rounded-md bg-raposo-yellow-washed border-2 border-raposo-red px-6 py-3 text-sm font-extrabold text-raposo-red-dark shadow-md transition-all [:hover,.active]:bg-yellow-400 [:hover,.active]:shadow-xl "
+            data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
+          >
+            Solicitar Orçamento
+          </a>
+          <a
+            href="#servicos"
+            className="rounded-md reveal border border-raposo-dark-500 bg-raposo-red-dark px-6 py-3 text-sm font-semibold text-white transition-all [&:is(:hover,.active)]:bg-raposo-red/60 [&:is(:hover,.active)]:border-raposo-yellow [&:is(:hover,.active)]:text-raposo-yellow"
+          >
+            Ver Serviços
+          </a>
         </div>
       </div>
     </section>

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --dark-hue: 265;
+  --dark-chroma: 0.012;
+
   /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
   /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
@@ -9,7 +12,7 @@
   --color-raposo-yellow: #ffd400;
   --color-raposo-yellow-washed: #fbd471;
   --font-sans: "Inter", sans-serif;
-  --color-raposo-dark-50: oklch(0.984 0.0015 247.858);
+  /* --color-raposo-dark-50: oklch(0.984 0.0015 247.858);
   --color-raposo-dark-100: oklch(0.968 0.0035 247.896);
   --color-raposo-dark-200: oklch(0.929 0.0065 255.508);
   --color-raposo-dark-300: oklch(0.869 0.011 252.894);
@@ -20,6 +23,18 @@
   --color-raposo-dark-800: oklch(0.279 0.0205 260.031);
   --color-raposo-dark-900: oklch(0.208 0.021 265.755);
   --color-raposo-dark-950: oklch(0.129 0.021 264.695);
+  --color-raposo-dark: oklch(0.129 0.021 264.695); */
+  --color-raposo-dark-50: oklch(0.984 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-100: oklch(0.968 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-200: oklch(0.929 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-300: oklch(0.869 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-400: oklch(0.704 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-500: oklch(0.554 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-600: oklch(0.446 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-700: oklch(0.372 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-800: oklch(0.279 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-900: oklch(0.208 var(--dark-chroma) var(--dark-hue));
+  --color-raposo-dark-950: oklch(0.129 var(--dark-chroma) var(--dark-hue));
   --color-raposo-dark: oklch(0.129 0.021 264.695);
 }
 @layer base {
@@ -27,7 +42,7 @@
     @apply antialiased scroll-smooth;
   }
   body {
-    @apply bg-raposo-dark-800 text-raposo-yellow-washed m-0 p-0;
+    @apply bg-raposo-dark-950 text-raposo-yellow-washed m-0 p-0;
   }
   section {
     @apply **:duration-500;
@@ -68,12 +83,13 @@
   @keyframes revealOnScroll {
     from {
       opacity: 0;
-      transform: translateY(200px);
+      /* Se --reveal-x não existir, o padrão é 0. Se --reveal-y não existir, o padrão é 0 */
+      transform: translate(var(--reveal-x, 0), var(--reveal-y, 0));
       filter: brightness(0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate(0, 0);
       filter: brightness(1);
     }
   }
@@ -100,8 +116,4 @@
     opacity: 1;
     transform: none;
   }
-}
-
-.showAxtive {
-  width: 100svw !important;
 }

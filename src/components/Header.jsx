@@ -15,14 +15,13 @@ export function Header() {
   return (
     <header
       id="header"
-      className="sticky float-start top-0 w-svw border-raposo-dark-500/50 bg-raposo-dark-800 transition-all duration-1000 z-10"
+      className="sticky float-start top-0 w-full border-raposo-dark-500/50 bg-raposo-dark-950 transition-all duration-1000 z-50"
     >
+      {" "}
+      <div className="w-full h-28 absolute -bottom-28 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-dark-950)_0%_50%,color-mix(in_srgb,var(--color-raposo-dark-950)_40%,transparent)_90%,transparent] border-t-2 border-raposo-dark-600"></div>
       <div className="mx-auto max-h-25 flex gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8 transition-all duration-700">
         {/* CONTAINER DA LOGO */}
-        <a
-          href="#"
-          className="relative bg-raposo-dark-800 w-fit max-w-[60svw] px-6  rounded-md  border-raposo-dark-500/50 drop-shadow-[0_10px_10px_#000f] hover:translate-y-4 group"
-        >
+        <a href="#" className="relative w-fit max-w-[60svw] px-6    group">
           {/* <div className="absolute z-[-1  ] bg-linear-to-b from-amber-100/50 to-raposo-dark-200/40 size-full m-1  top-0 left-0 "></div> */}
           <LogoRaposo
             className="aspect-4/1  transition-all h-20  max-md:in-[.shrunk]:h-12 max-w-full duration-500 group-hover:translate-y-4"
@@ -52,7 +51,7 @@ export function Header() {
             <ZapZap className=" size-10 lg:size-0 fill-raposo-yellow group-hover:size-10  transition-all duration-500" />
           </a>
         </div>
-      </div>
+      </div>{" "}
     </header>
   );
 }

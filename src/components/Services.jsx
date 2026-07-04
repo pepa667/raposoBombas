@@ -53,8 +53,8 @@ const SERVICOS = [
 export function Services() {
   return (
     <section id="servicos" className="relative">
-      <div className="w-full h-50 absolute -bottom-28 bg-linear-to-t from-raposo-dark-600 via-raposo-dark-600/40 via-10% to-transparent border-b-2 border-raposo-dark-900"></div>
-      <div className=" w-[90svw] max-w-6xl px-4 py-16 mb-28 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark-800 bg-linear-to-t from-black/50 to-transparent relative rounded-md border-raposo-dark-500/50 drop-shadow-[0_10px_10px_#000f]">
+      <div className="w-full h-32 absolute -bottom-28 bg-radial-[100%_50%_at_50%_130%,var(--color-raposo-dark-600)_0%_50%,transparent_95%,transparent] border-b-2 border-raposo-dark-600 "></div>
+      <div className=" w-[90svw] max-w-6xl px-4 py-16 mb-28 mx-auto sm:px-6 lg:px-8 lg:py-24 bg-raposo-dark-800 bg-linear-to-t from-black/35 to-transparent relative rounded-md  drop-shadow-[0_10px_10px_#000f]">
         <div className="text-center space-y-16 mb-16 min-w-full">
           <h2 className="text-3xl font-bold tracking-tight text-raposo-dark-200/80 sm:text-6xl">
             Nossos Serviços Especializados
@@ -74,7 +74,7 @@ export function Services() {
             <div
               key={index}
               style={{ "--delay-step": `${servico.revealDelay}%` }}
-              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] show group relative rounded-md  border-raposo-dark-500/75 aspect-square bg-linear-to-t from-raposo-dark-900/40 to-raposo-dark-500/40 p-6 shadow-sm transition-all duration-300 hover:-tranraposo-dark-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-tranraposo-dark-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
+              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] revealY show group relative rounded-md  border-raposo-dark-500/75 aspect-square bg-linear-to-t from-raposo-dark-900/40 to-raposo-dark-500/40 p-6 shadow-sm transition-all duration-300 hover:-tranraposo-dark-y-1 hover:border-raposo-red/20 hover:shadow-md [&.active]:-tranraposo-dark-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
             >
               <div className="aspect-square relative group-[&.active]:blur-md">
                 <picture>
