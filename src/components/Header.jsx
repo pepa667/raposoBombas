@@ -21,7 +21,11 @@ export function Header() {
       <div className="w-full h-28 absolute -bottom-28 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-dark-950)_0%_50%,color-mix(in_srgb,var(--color-raposo-dark-950)_40%,transparent)_90%,transparent] border-t-2 border-raposo-yellow/50"></div>
       <div className="mx-auto max-h-25 flex  gap-3 md:gap-8 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8 transition-all duration-700">
         {/* CONTAINER DA LOGO */}
-        <a href="#" className="relative w-fit max-w-[60svw] px-6    group">
+        <a
+          href="#"
+          className="relative w-fit max-w-[60svw] px-6    group"
+          aria-label="Início"
+        >
           {/* <div className="absolute z-[-1  ] bg-linear-to-b from-amber-100/50 to-raposo-dark-200/40 size-full m-1  top-0 left-0 "></div> */}
           <LogoRaposo
             className="aspect-4/1  transition-all h-20  max-md:in-[.shrunk]:h-12 max-w-full duration-500 group-hover:translate-y-4"

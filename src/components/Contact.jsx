@@ -31,13 +31,22 @@ export function Contact() {
               </p>
             </div>
             <div className="pt-2 flex flex-row flex-wrap lg:gap-12 max-lg:justify-evenly">
-              <a href="https://www.facebook.com/RaposoBombas/">
+              <a
+                href="https://www.facebook.com/RaposoBombas/"
+                aria-label="Facebook"
+              >
                 <SocialIcon network="facebook" />
               </a>
-              <a href="https://www.instagram.com/raposobombas/">
+              <a
+                href="https://www.instagram.com/raposobombas/"
+                aria-label="Instagram"
+              >
                 <SocialIcon network="instagram" />
               </a>
-              <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggBECMYJzIGCAAQRRg5MgYIARAjGCcyBggCEEUYPDIGCAMQRRg8MgYIBBBFGDwyBggFEEUYPDIGCAYQRRg9MgYIBxBFGD3SAQg4NzM2ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KfsgAUIOi8WUMVUPlSPaJMRF&daddr=Rua+Dr.+Luiz+Mendes+de+Almeida,+2264+-+Vila+Espirito+Santo,+Sorocaba+-+SP,+18051-290">
+              <a
+                href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggBECMYJzIGCAAQRRg5MgYIARAjGCcyBggCEEUYPDIGCAMQRRg8MgYIBBBFGDwyBggFEEUYPDIGCAYQRRg9MgYIBxBFGD3SAQg4NzM2ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KfsgAUIOi8WUMVUPlSPaJMRF&daddr=Rua+Dr.+Luiz+Mendes+de+Almeida,+2264+-+Vila+Espirito+Santo,+Sorocaba+-+SP,+18051-290"
+                aria-label="Google Maps"
+              >
                 <SocialIcon network="google-maps" />
               </a>
               <a
@@ -46,6 +55,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="whatsapp-btn "
                 data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
+                aria-label="WhatsApp"
               >
                 <SocialIcon network="whatsapp" />
               </a>
