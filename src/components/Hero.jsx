@@ -71,17 +71,15 @@ export function Hero() {
             href="https://wa.me/seunumerodoZap"
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-btn h-12 reveal group inline-flex items-center gap-0 lg:hover:gap-3.5  content-evenly bg-raposo-yellow/30 px-4 py-2 text-lg font-bold text-raposo-dark-200 shadow-md transition-all hover:bg-raposo-red-dark hover:shadow-lg border-2 border-raposo-yellow hover:border-raposo-yellow hover:text-raposo-yellow duration-1000"
+            className="whatsapp-btn h-12 reveal group inline-flex items-center gap-4 lg:gap-0  content-evenly bg-raposo-yellow/30 px-4 py-2 text-lg font-bold text-raposo-dark-200 shadow-md transition-all [&:is(:hover,.active)]:bg-raposo-red-dark [&:is(:hover,.active)]:shadow-lg border-2 border-raposo-yellow [&:is(:hover,.active)]:border-raposo-yellow [&:is(:hover,.active)]:text-raposo-yellow [&:is(:hover,.active)]:gap-4 duration-1000"
             data-message="Olá! Vi o site de vocês e quero conversar com a equipe de vendas sobre o plano Pro."
           >
-            <span className=" size-0 lg:size-auto overflow-hidden">
-              Solicitar Orçamento
-            </span>
-            <ZapZap className=" size-10 lg:size-0 fill-green-600 group-hover:size-16  transition-all duration-500" />
+            <span>Solicitar Orçamento</span>
+            <ZapZap className=" reveal size-0 fill-green-600 [&:is(.group:hover_&,.active)]:size-16  transition-all duration-500" />
           </a>
           <a
             href="#servicos"
-            className=" reveal group inline-flex items-center gap-0 lg:hover:gap-3.5  content-evenly bg-raposo-yellow/75 px-4 py-2 text-lg font-bold text-raposo-dark-950 shadow-md transition-all hover:bg-raposo-red-dark hover:shadow-lg border-2 border-raposo-red-dark hover:border-raposo-yellow hover:text-raposo-yellow duration-1000"
+            className=" reveal group inline-flex items-center gap-0 lg:hover:gap-3.5  content-evenly bg-raposo-yellow/75 px-4 py-2 text-lg font-bold text-raposo-dark-950 shadow-md transition-all [&:is(:hover,.active)]:bg-raposo-red-dark [&:is(:hover,.active)]:shadow-lg border-2 border-raposo-red-dark [&:is(:hover,.active)]:border-raposo-yellow [&:is(:hover,.active)]:text-raposo-yellow duration-1000"
           >
             Ver Serviços
           </a>

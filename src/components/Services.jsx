@@ -74,7 +74,7 @@ export function Services() {
             <div
               key={index}
               style={{ "--delay-step": `${servico.revealDelay}%` }}
-              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] [--reveal-y:-300px] show group relative    border-2 border-t border-b-8 border-raposo-yellow aspect-square bg-raposo-red bg-linear-to-t from-raposo-dark-600 to-raposo-dark-900 bg-blend-multiply p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red hover:shadow-md [&.active]:-translate-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
+              className={`scroll-reveal reveal [--delay-step:var(--delay-step)] [--reveal-y:300px] show group relative    border-2 border-t border-b-8 border-raposo-yellow aspect-square bg-raposo-red bg-linear-to-t from-raposo-dark-600 to-raposo-dark-900 bg-blend-multiply p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-raposo-red hover:shadow-md [&.active]:-translate-y-1 [&.active]:border-raposo-red/20 [&.active]:shadow-md overflow-hidden`}
             >
               <div className="aspect-square relative group-[&.active]:blur-md">
                 <picture>
