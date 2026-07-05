@@ -2,17 +2,17 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="relative bg-raposo-red bg-linear-to-t  from-black from-0% via-raposo-dark-40 via-6% to-raposo-dark-600 border-b border-raposo-dark-950 bg-blend-multiply "
+      className="bg-raposo-red via-raposo-dark-40 to-raposo-dark-600 border-raposo-dark-950 relative border-b bg-linear-to-t from-black from-0% via-6% bg-blend-multiply"
     >
-      <div className="w-full h-28 absolute top-0 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-dark-950)_0%_50%,color-mix(in_srgb,var(--color-raposo-dark-950)_40%,transparent)_90%,transparent] border-t-2 border-raposo-dark-400/50"></div>
+      <div className="border-raposo-dark-400/50 absolute top-0 h-28 w-full border-t-2 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-dark-950)_0%_50%,color-mix(in_srgb,var(--color-raposo-dark-950)_40%,transparent)_90%,transparent]"></div>
 
-      <div className="mx-auto max-w-[90svw] max-h-fit w-7xl px-1 py-16 sm:px-6 lg:px-8 lg:py-24 drop-shadow-[0_10px_10px_#000f]">
-        <div className="flex flex-col justify-between scroll-reveal min-h-fit gap-10 px-4 px-4 py-16 mb-28 mx-auto sm:px-6 lg:px-8 lg:py-24 border-y-20 border-raposo-yellow bg-raposo-red bg-linear-to-t from-black/80 to-raposo-dark-600 relative   drop-shadow-[0_10px_10px_#000f] bg-blend-multiply">
-          <h2 className="text-3xl font-bold tracking-tight text-raposo-yellow sm:text-6xl w-[70%] fullShow">
+      <div className="mx-auto max-h-fit w-7xl max-w-[90svw] px-1 py-16 drop-shadow-[0_10px_10px_#000f] sm:px-6 lg:px-8 lg:py-24">
+        <div className="scroll-reveal border-raposo-yellow bg-raposo-red to-raposo-dark-600 relative mx-auto mb-28 flex min-h-fit flex-col justify-between gap-10 border-y-20 bg-linear-to-t from-black/80 px-4 py-16 bg-blend-multiply drop-shadow-[0_10px_10px_#000f] sm:px-6 lg:px-8 lg:py-24">
+          <h2 className="text-raposo-yellow fullShow w-[70%] text-3xl font-bold tracking-tight sm:text-6xl">
             Tradição de mais de 40 anos no mercado diesel
           </h2>
 
-          <ul className="relative text-raposo-dark-200 leading-relaxed text-xl md:text-2xl flex flex-col gap-8 mx-12 *:border-l-2 *:border-raposo-yellow *: *:px-4 *:bg-linear-30 *:from-raposo-red/40 *:to-transparent">
+          <ul className="text-raposo-dark-200 *:border-raposo-yellow *: *:from-raposo-red/40 relative mx-12 flex flex-col gap-8 text-xl leading-relaxed *:border-l-2 *:bg-linear-30 *:to-transparent *:px-4 md:text-2xl">
             <li
               className="scroll-reveal [--reveal-x:-200px]"
               style="--delay-step:20%;"

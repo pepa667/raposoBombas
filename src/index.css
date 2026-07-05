@@ -1,120 +1,31 @@
 @import "tailwindcss";
 
-@theme {
-  --dark-hue: 29;
-  --dark-chroma: 0.01;
+@plugin 'tailwindcss-motion';
+@plugin 'tailwindcss-intersect';
 
-  /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
-  /* --color-raposo-dark: hsl(from var(--color-raposo-dark-900) h 20% 15%); */
-  /* --color-raposo-dark: hsl(from var(--color-raposo-red) h 30% 10%); */
-  --color-raposo-red: #891617;
-  --color-raposo-red-dark: hsl(from var(--color-raposo-red) h 50% 10%);
-  /* --color-raposo-yellow: #ffd400; */
-  --color-raposo-yellow: var(--color-amber-400);
-  --color-raposo-yellow-washed: #fbd471;
+@theme {
   --font-sans: "Inter", sans-serif;
-  /* --color-raposo-dark-50: oklch(0.984 0.0015 247.858);
-  --color-raposo-dark-100: oklch(0.968 0.0035 247.896);
-  --color-raposo-dark-200: oklch(0.929 0.0065 255.508);
-  --color-raposo-dark-300: oklch(0.869 0.011 252.894);
-  --color-raposo-dark-400: oklch(0.704 0.02 256.788);
-  --color-raposo-dark-500: oklch(0.554 0.023 257.417);
-  --color-raposo-dark-600: oklch(0.446 0.0215 257.281);
-  --color-raposo-dark-700: oklch(0.372 0.022 257.287);
-  --color-raposo-dark-800: oklch(0.279 0.0205 260.031);
-  --color-raposo-dark-900: oklch(0.208 0.021 265.755);
-  --color-raposo-dark-950: oklch(0.129 0.021 264.695);
-  --color-raposo-dark: oklch(0.129 0.021 264.695); */
-  --color-raposo-dark-50: oklch(0.984 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-100: oklch(0.968 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-200: oklch(0.929 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-300: oklch(0.869 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-400: oklch(0.704 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-500: oklch(0.554 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-600: oklch(0.446 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-700: oklch(0.372 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-800: oklch(0.279 var(--dark-chroma) var(--dark-hue));
-  --color-raposo-dark-900: oklch(0.208 calc(var(--dark-chroma) + 0.01) var(--dark-hue));
-  --color-raposo-dark-950: oklch(0.129 calc(var(--dark-chroma) + 0.03) var(--dark-hue));
-  --color-raposo-dark: oklch(0.129 0.021 264.695);
+
+  --red-hue: 30;
+  --yellou-hue: 80;
+
+  --color-raposo-red: oklch(40% 40% var(--red-hue));
+  --color-raposo-red-light: oklch(80% 70% var(--red-hue));
+  --color-raposo-red-dark: oklch(10% 40% var(--red-hue));
+  --color-raposo-yellow: oklch(85% 45% var(--yellou-hue));
+  --color-raposo-yellow-light: oklch(90% 40% var(--yellou-hue));
+  --color-raposo-yellow-dark: oklch(40% 30% var(--yellou-hue));
+  --color-raposo-black: oklch(0% 0% 0);
+  --color-raposo-dark: oklch(20% 0% 0);
+  --color-raposo-gray: oklch(50% 0% 0);
+  --color-raposo-light: oklch(80% 0% 0);
+  --color-raposo-white: oklch(100% 0% 0);
 }
 @layer base {
   html {
-    @apply antialiased scroll-smooth;
+    @apply scroll-smooth antialiased;
   }
   body {
-    @apply bg-raposo-dark-950 text-raposo-yellow-washed m-0 p-0;
-  }
-  section {
-    @apply **:duration-500;
-  }
-}
-
-@media (max-width: 640px) {
-  /* Breakpoint sm do Tailwind */
-  #since {
-    position: relative;
-    left: 0;
-  }
-}
-@supports (animation-timeline: scroll()) {
-  @keyframes rollDown {
-    0% {
-      opacity: 1;
-      transform: translateY(1svh);
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(100svh);
-    }
-  }
-
-  .roll-down {
-    /* CORREÇÃO: Apontar direto para o nome do keyframes */
-    animation-name: rollDown;
-    animation-timeline: scroll(root);
-    animation-fill-mode: both;
-    animation-range: 0 100vh;
-  }
-}
-@supports (animation-timeline: scroll()) {
-  @keyframes revealOnScroll {
-    from {
-      opacity: 0;
-      /* Se --reveal-x não existir, o padrão é 0. Se --reveal-y não existir, o padrão é 0 */
-      transform: translate(var(--reveal-x, 0), var(--reveal-y, 0));
-      filter: brightness(0);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0, 0);
-      filter: brightness(1);
-    }
-  }
-
-  /* Aplica reveal suave conforme as seções entram na tela */
-  .scroll-reveal {
-    view-timeline-name: --section;
-    view-timeline-axis: block;
-    animation-name: revealOnScroll;
-    animation-fill-mode: both;
-    animation-timeline: --section;
-    /* Usa a variável se ela existir, senão o padrão é 0% */
-    animation-range: entry calc(2% + var(--delay-step, 0%)) contain calc(5% + var(--delay-step, 0%));
-  }
-}
-
-/* Fallback clássico caso o navegador não suporte animação de scroll */
-@supports not (animation-timeline: scroll()) {
-  .roll-down {
-    opacity: 1;
-    transform: none;
-  }
-  .scroll-reveal {
-    opacity: 1;
-    transform: none;
+    @apply bg-raposo-red-dark text-raposo-yellow-light m-0 p-0;
   }
 }

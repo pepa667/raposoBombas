@@ -1,35 +1,13 @@
-import { useEffect } from "preact/hooks";
-import motorMp4 from "../assets/billboard/motor.mp4";
-
-window.addEventListener("scroll", () => {
-  const bbTitle = document.getElementById("bbTitle");
-  if (!bbTitle) return; // Evita erros caso o elemento não exista na tela
-
-  // Posição do elemento em relação ao topo da tela visível
-  const elementoTopo = bbTitle.getBoundingClientRect().top;
-
-  // Linha imaginária no meio exato da tela
-  const meioDaTela = window.innerHeight / 1.5;
-
-  // Se o topo do elemento passou do meio da tela (ficou menor que o meio)
-  if (elementoTopo < meioDaTela) {
-    bbTitle.classList.add("opacity-100");
-  } else {
-    bbTitle.classList.remove("opacity-100");
-  }
-});
+import motorMp4 from '../assets/billboard/motor.mp4';
 
 export function Billboard() {
   return (
     <section
       /* REMOVIDO o drop-shadow daqui para não matar o fixed do filho! Mantive o border. */
-      className="showReveal billboard-title relative flex flex-col-reverse h-[60svh] overflow-hidden bg-raposo-dark-800  "
-      style={{ clipPath: "inset(0 0 0 0)" }}
+      className="showReveal billboard-title bg-raposo-dark relative flex h-[60svh] flex-col-reverse overflow-hidden"
+      style={{ clipPath: 'inset(0 0 0 0)' }}
     >
-      <div className="w-full h-32 absolute top-0 bg-radial-[65%_70%_at_50%_-30%,var(--color-raposo-red-dark)_0%_50%,color-mix(in_srgb,var(--color-raposo-red-dark)_20%,transparent)_90%,transparent]"></div>
-      <div className="w-full h-32 absolute bottom-0 bg-radial-[100%_50%_at_50%_130%,var(--color-raposo-yellow)_0%_50%,transparent_85%,transparent]  border-b-2 border-raposo-dark-900 "></div>
-
-      <div className="fixed top-[5svh] left-0 w-full h-svh -z-10 pointer-events-none">
+      <div className="pointer-events-none fixed top-[5svh] left-0 -z-10 h-svh w-full">
         <video
           src={motorMp4}
           autoPlay
@@ -38,22 +16,22 @@ export function Billboard() {
           playsInline
           id="background-video"
           /* Limpei as classes: isso aqui já faz o vídeo cobrir a tela perfeitamente */
-          className="absolute md:top-[10svh] inset-0 w-full h-[90svh] object-cover md:object-contain opacity-90 mix-blend-multiply"
+          className="absolute inset-0 h-[90svh] w-full object-none opacity-90 mix-blend-multiply md:top-[10svh]"
         />
 
-        <div className="absolute inset-0 bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%  h-svh"></div>
-        <div className="absolute inset-0 bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%  h-svh"></div>
-        <div className="absolute inset-0 bg-linear-to-t from-raposo-dark-950 to-raposo-dark-950/30  "></div>
+        <div className="absolute inset-0 h-svh bg-linear-to-r from-red-950/50 from-40% to-transparent to-70%"></div>
+        <div className="absolute inset-0 h-svh bg-linear-to-r from-transparent from-65% to-amber-400/30 to-100%"></div>
+        <div className="bg-raposo-gray"></div>
       </div>
 
       <div
         id="bbTitle"
-        className="relative transition-all duration-1500  max-h-fit align-baseline text-center bottom-[5svh] mx-auto min-w-fit max-w-[90svw] w-7xl py-6 bg-raposo-dark-950  text-raposo-yellow  opacity-0"
+        className="bg-raposo-dark-950 text-raposo-yellow relative bottom-[5svh] mx-auto max-h-fit w-7xl max-w-[90svw] min-w-fit py-6 text-center align-baseline opacity-0 transition-all duration-1500"
       >
-        <h2 className="text-3xl font-bold tracking-tight sm:text-6xl   mb-8">
+        <h2 className="mb-8 text-3xl font-bold tracking-tight sm:text-6xl">
           Precisão que move o seu negócio.
         </h2>
-        <p className="text-lg font-medium  sm:text-2xl leading-relaxed">
+        <p className="text-lg leading-relaxed font-medium sm:text-2xl">
           Diagnóstico avançado e tecnologia de ponta para sistemas de injeção
           diesel desde 1985.
         </p>
