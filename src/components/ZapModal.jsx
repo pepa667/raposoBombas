@@ -1,7 +1,7 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from 'preact/hooks';
 
-const WHATSAPP_PHONE = "5511999999999"; // Coloque seu número aqui
-const DEFAULT_MESSAGE = "Olá, gostaria de mais informações.";
+const WHATSAPP_PHONE = '5511999999999'; // Coloque seu número aqui
+const DEFAULT_MESSAGE = 'Olá, gostaria de mais informações.';
 
 export function ZapModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,38 +12,38 @@ export function ZapModal() {
   useEffect(() => {
     const handleGlobalClick = (e) => {
       const btn =
-        e.target && typeof e.target.closest === "function"
-          ? e.target.closest(".whatsapp-btn")
+        e.target && typeof e.target.closest === 'function'
+          ? e.target.closest('.whatsapp-btn')
           : null;
 
       if (btn) {
         e.preventDefault();
 
         // Pega o texto direto do atributo 'data-message' (ou 'data-cta')
-        // Se estiver vazio, usa a mensagem padrão
+        // Se estiver vazio, usa a mensagem padrão`
         const customMessage =
-          btn.getAttribute("data-message") || DEFAULT_MESSAGE;
+          btn.getAttribute('data-message') || DEFAULT_MESSAGE;
 
         setMessage(customMessage);
         setIsOpen(true);
       }
     };
 
-    document.body.addEventListener("click", handleGlobalClick);
-    return () => document.body.removeEventListener("click", handleGlobalClick);
+    document.body.addEventListener('click', handleGlobalClick);
+    return () => document.body.removeEventListener('click', handleGlobalClick);
   }, []);
 
   // Controla o overflow do body e o fechar com Escape
   useEffect(() => {
     if (!isOpen) return;
-    document.body.classList.add("overflow-hidden");
+    document.body.classList.add('overflow-hidden');
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") setIsOpen(false);
+      if (e.key === 'Escape') setIsOpen(false);
     };
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.body.classList.remove("overflow-hidden");
-      document.removeEventListener("keydown", handleKeyDown);
+      document.body.classList.remove('overflow-hidden');
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen]);
 
@@ -54,8 +54,8 @@ export function ZapModal() {
       id="whatsapp-modal"
       className={`fixed inset-0 z-200 flex items-end justify-center p-4 transition-opacity duration-300 sm:items-center ${
         isOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
+          ? 'pointer-events-auto opacity-100'
+          : 'pointer-events-none opacity-0'
       }`}
       role="dialog"
       aria-modal="true"
@@ -63,12 +63,12 @@ export function ZapModal() {
     >
       <div
         onClick={closeModal}
-        className="absolute inset-0 bg-raposo-dark-950/80 backdrop-blur-sm"
+        className="bg-raposo-dark-950/80 absolute inset-0 backdrop-blur-sm"
       ></div>
 
       <div
-        className={`relative z-10 w-full max-w-md  border border-raposo-dark-800 bg-raposo-dark-900 p-6 shadow-2xl transition-transform duration-300 ${
-          isOpen ? "translate-y-0 scale-100" : "translate-y-4 scale-95"
+        className={`border-raposo-dark-800 bg-raposo-dark-900 relative z-10 w-full max-w-md border p-6 shadow-2xl transition-transform duration-300 ${
+          isOpen ? 'translate-y-0 scale-100' : 'translate-y-4 scale-95'
         }`}
       >
         <div className="mb-5 flex items-center justify-between">
@@ -82,7 +82,7 @@ export function ZapModal() {
             </svg>
             <h2
               id="modal-title"
-              className="text-sm font-bold tracking-widest text-raposo-dark-300 uppercase"
+              className="text-raposo-dark-300 text-sm font-bold tracking-widest uppercase"
             >
               Enviar mensagem
             </h2>
@@ -90,7 +90,7 @@ export function ZapModal() {
           <button
             onClick={closeModal}
             aria-label="Fechar"
-            className="rounded p-1 text-raposo-dark-500 transition-colors hover:text-raposo-dark-200"
+            className="text-raposo-dark-500 hover:text-raposo-dark-200 rounded p-1 transition-colors"
           >
             <svg
               className="h-5 w-5"
@@ -108,11 +108,11 @@ export function ZapModal() {
           </button>
         </div>
 
-        <p className="mb-1 text-xs font-semibold tracking-widest text-raposo-dark-500 uppercase">
+        <p className="text-raposo-dark-500 mb-1 text-xs font-semibold tracking-widest uppercase">
           Prévia da mensagem
         </p>
-        <div className="mb-6  border border-raposo-dark-700 bg-raposo-dark-950 px-4 py-3">
-          <p className="text-sm leading-relaxed text-raposo-dark-300">
+        <div className="border-raposo-dark-700 bg-raposo-dark-950 mb-6 border px-4 py-3">
+          <p className="text-raposo-dark-300 text-sm leading-relaxed">
             {message}
           </p>
         </div>
@@ -120,7 +120,7 @@ export function ZapModal() {
         <div className="flex gap-3">
           <button
             onClick={closeModal}
-            className="flex-1  border border-raposo-dark-700 px-4 py-3 text-sm font-bold tracking-wider text-raposo-dark-400 uppercase transition-colors hover:bg-raposo-dark-800-800 hover:text-raposo-dark-200"
+            className="border-raposo-dark-700 text-raposo-dark-400 hover:bg-raposo-dark-800-800 hover:text-raposo-dark-200 flex-1 border px-4 py-3 text-sm font-bold tracking-wider uppercase transition-colors"
           >
             Cancelar
           </button>
@@ -129,7 +129,7 @@ export function ZapModal() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setTimeout(closeModal, 300)}
-            className="flex flex-1 items-center justify-center gap-2  bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500"
+            className="flex flex-1 items-center justify-center gap-2 bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500"
           >
             <svg
               className="h-5 w-5 shrink-0"

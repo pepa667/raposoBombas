@@ -4,9 +4,9 @@
 @plugin 'tailwindcss-intersect';
 
 @theme {
-  --font-sans: "Inter", sans-serif;
+  /* --font-sans: "Inter", sans-serif; */
 
-  --red-hue: 30;
+  /* --red-hue: 30;
   --yellou-hue: 80;
 
   --color-raposo-red: oklch(40% 40% var(--red-hue));
@@ -19,7 +19,7 @@
   --color-raposo-dark: oklch(20% 0% 0);
   --color-raposo-gray: oklch(50% 0% 0);
   --color-raposo-light: oklch(80% 0% 0);
-  --color-raposo-white: oklch(100% 0% 0);
+  --color-raposo-white: oklch(100% 0% 0); */
 }
 @layer base {
   html {
@@ -27,5 +27,8 @@
   }
   body {
     @apply bg-raposo-red-dark text-raposo-yellow-light m-0 p-0;
+  }
+  main {
+    @apply min-h-screen bg-zinc-950 font-sans text-slate-200 selection:bg-amber-500 selection:text-zinc-900;
   }
 }

@@ -32,61 +32,86 @@ const SERVICOS = [
   },
 ];
 
+function ServiceCard({ title, desc }) {
+  return (
+    <div class="reveal-card /* Desktop: Hover Padrão */ /* Mobile: Ativa no Hover OU na classe .active (injetada pelo scroll) */ rounded-xl border border-zinc-800 bg-zinc-950 p-8 transition-all duration-500 md:hover:-translate-y-2 md:hover:border-amber-500 md:hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] max-md:[&:is(:hover,.active)]:-translate-y-2 max-md:[&:is(:hover,.active)]:border-amber-500 max-md:[&:is(:hover,.active)]:shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+      <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-amber-500">
+        ⚙️
+      </div>
+      <h4 class="mb-3 text-xl font-bold text-white">{title}</h4>
+      <p class="text-zinc-400">{desc}</p>
+    </div>
+  );
+}
+
 export function Services() {
   return (
-    <section id="servicos" className="[@media_div:has(&)]:bg-black relative">
-      {/* <div className="border-raposo-yellow bg-raposo-red-dark before:border-raposo-red relative container mx-auto mb-28 w-[90svw] max-w-6xl border-y-20 py-16 before:absolute before:-inset-10 before:-bottom-20 before:-z-10 before:border before:bg-black sm:px-6 lg:px-8 lg:py-24"> */}
-      <div className="border-raposo-yellow bg-raposo-dark berelative mx-auto mb-28 w-[90svw] max-w-6xl border-y-20 py-16 before:absolute sm:px-6 lg:px-8 lg:py-24">
-        <div className="mb-16 min-w-full space-y-16 text-center">
-          <h2 className="text-raposo-yellow text-4xl font-bold tracking-tight md:text-5xl xl:text-6xl">
-            Nossos Serviços Especializados
-          </h2>
-          <div
-            id="progressBar"
-            className="bg-raposo-yellow before:bg-raposo-yellow before:-tranlate relative mx-auto h-1 w-[30%] before:absolute before:top-[50%] before:h-px before:w-0 before:max-w-5xl before:-translate-x-1/2 before:transition-all before:duration-2000 before:content-['']"
-          ></div>
-          <p className="text-raposo-yellow-washed mx-auto max-w-2xl text-2xl">
-            Equipamentos de diagnóstico avançado para garantir a máxima
-            performance e regulagem do seu motor diesel.
+    // {SERVICOS.map((servico, index) => (
+    //   <div
+    //     key={index}
+    //     style={{ '--delay-step': `${servico.revealDelay}%` }}
+    //     /* AJUSTADO AQUI: Mudamos para hover:[&_.reveal]:bottom-0 */
+    //     className={`group border-raposo-yellow-dark bg-raposo-red-dark relative aspect-square overflow-hidden border-2 border-t border-b-8 hover:[&_.reveal]:bottom-0`}
+    //   >
+    //     <div className="relative aspect-square transition-all duration-700 group-hover:blur-lg group-[&.active]:blur-md">
+    //       <picture>
+    //         <source srcSet={servico.ilustraWebp} type="image/webp" />
+    //         <img
+    //           src={servico.ilustraPng}
+    //           alt={servico.title}
+    //           className="size-full object-cover p-8" /* Corrigido de 'class' para 'className' que é o padrão do React */
+    //           loading="lazy"
+    //         />
+    //       </picture>
+
+    //       {/* Nota: Este segundo h2 também tem a classe 'reveal'. Ele também será afetado pelo bottom-0! */}
+    //       <h2 className="reveal bg-raposo-yellow-dark text-raposo-yellow-light absolute bottom-0 float-left w-full py-2 text-center text-2xl">
+    //         {servico.title}
+    //       </h2>
+    //     </div>
+
+    //     {/* O seu primeiro .reveal agora vai subir perfeitamente ao dar hover no pai */}
+    //     <div className="reveal bg-raposo-red/50 absolute -bottom-full left-0 flex aspect-square size-full flex-col flex-wrap justify-evenly p-6 text-center transition-all duration-500">
+    //       <h3 className="text-raposo-yellow mb-2 text-2xl font-bold">
+    //         {servico.title}
+    //       </h3>
+    //       <p className="text-raposo-dark-200 text-xl leading-relaxed">
+    //         {servico.description}
+    //       </p>
+    //     </div>
+    //   </div>
+    // ))}
+
+    // {/* ==========================================
+    //           4. SERVIÇOS (Os Cards com aquele seu seletor :is() )
+    //       ========================================== */}
+    <section
+      id="servicos"
+      class="relative z-10 border-t border-zinc-800 bg-zinc-900 px-4 py-24"
+    >
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-16 text-center">
+          <h3 class="mb-4 text-3xl font-bold text-white md:text-4xl">
+            Nossos Serviços
+          </h3>
+          <p class="text-zinc-400">
+            Precisão e tecnologia para o coração do seu veículo.
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICOS.map((servico, index) => (
-            <div
-              key={index}
-              style={{ '--delay-step': `${servico.revealDelay}%` }}
-              /* AJUSTADO AQUI: Mudamos para hover:[&_.reveal]:bottom-0 */
-              className={`group border-raposo-yellow-dark bg-raposo-red-dark relative aspect-square overflow-hidden border-2 border-t border-b-8 hover:[&_.reveal]:bottom-0`}
-            >
-              <div className="relative aspect-square transition-all duration-700 group-hover:blur-lg group-[&.active]:blur-md">
-                <picture>
-                  <source srcSet={servico.ilustraWebp} type="image/webp" />
-                  <img
-                    src={servico.ilustraPng}
-                    alt={servico.title}
-                    className="size-full object-cover p-8" /* Corrigido de 'class' para 'className' que é o padrão do React */
-                    loading="lazy"
-                  />
-                </picture>
-
-                {/* Nota: Este segundo h2 também tem a classe 'reveal'. Ele também será afetado pelo bottom-0! */}
-                <h2 className="reveal bg-raposo-yellow-dark text-raposo-yellow-light absolute bottom-0 float-left w-full py-2 text-center text-2xl">
-                  {servico.title}
-                </h2>
-              </div>
-
-              {/* O seu primeiro .reveal agora vai subir perfeitamente ao dar hover no pai */}
-              <div className="reveal bg-raposo-red/50 absolute -bottom-full left-0 flex aspect-square size-full flex-col flex-wrap justify-evenly p-6 text-center transition-all duration-500">
-                <h3 className="text-raposo-yellow mb-2 text-2xl font-bold">
-                  {servico.title}
-                </h3>
-                <p className="text-raposo-dark-200 text-xl leading-relaxed">
-                  {servico.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <ServiceCard
+            title="Bombas Injetoras"
+            desc="Manutenção completa em sistemas mecânicos tradicionais."
+          />
+          <ServiceCard
+            title="Injeção Eletrônica"
+            desc="Diagnóstico avançado de módulos e sistemas Common Rail."
+          />
+          <ServiceCard
+            title="Turbos e Bicos"
+            desc="Calibração e reparo de bicos injetores para máxima potência."
+          />
         </div>
       </div>
     </section>
