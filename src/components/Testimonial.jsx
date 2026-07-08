@@ -7,7 +7,7 @@ function TestimonialCard({ name, role, text }) {
         <p class="mb-6 text-zinc-300 italic">"{text}"</p>
       </div>
       <div>
-        <h5 class="font-bold text-white">{name}</h5>
+        <h4 class="font-bold text-white">{name}</h4>
         <span class="text-xs font-bold tracking-wider text-amber-500 uppercase">
           {role}
         </span>
