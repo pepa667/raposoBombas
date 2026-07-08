@@ -1,4 +1,7 @@
-import motorMp4 from '../assets/hero/motor.mp4'; // Seu vídeo
+import motorMobileWebm from '../assets/hero/motor_mobile.webm'; // Seu vídeo
+import motorMobileMp4 from '../assets/hero/motor_mobile.mp4'; // Seu vídeo
+import motorHdWebm from '../assets/hero/motor_otimizado.webm'; // Seu vídeo
+import motorHdMp4 from '../assets/hero/motor_otimizado.mp4'; // Seu vídeo
 
 import { LogoRaposo } from './LogoRaposo'; // Certifique-se de que o nome e caminho batem com o arquivo criado
 
@@ -16,13 +19,28 @@ export function Hero() {
       {/* Vídeo Fixo no Fundo */}
       <div className="pointer-events-none fixed top-0 left-0 -z-10 h-svh w-full">
         <video
-          src={motorMp4}
           autoPlay
           muted
           loop
           playsInline
           className="object-fit absolute inset-0 top-1/2 left-1/2 h-auto max-h-[90%] w-7xl max-w-[140svw] -translate-x-1/2 -translate-y-1/2"
-        />
+        >
+          {/* 1. Celulares (Telas menores que 768px) carregam o mobile */}
+          <source
+            src={motorMobileWebm}
+            type="video/webm"
+            media="(max-width: 768px)"
+          />
+          <source
+            src={motorMobileMp4}
+            type="video/mp4"
+            media="(max-width: 768px)"
+          />
+
+          {/* 2. Telas maiores (Tablets e Desktop) carregam o HD */}
+          <source src={motorHdWebm} type="video/webm" />
+          <source src={motorHdMp4} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-zinc-950/70"></div>
         <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-zinc-950/40"></div>
       </div>
