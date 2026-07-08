@@ -63,11 +63,11 @@ export function ZapModal() {
     >
       <div
         onClick={closeModal}
-        className="bg-raposo-dark-950/80 absolute inset-0 backdrop-blur-sm"
+        className="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm"
       ></div>
 
       <div
-        className={`border-raposo-dark-800 bg-raposo-dark-900 relative z-10 w-full max-w-md border p-6 shadow-2xl transition-transform duration-300 ${
+        className={`relative z-10 w-full max-w-md border border-zinc-800 bg-zinc-900 p-6 shadow-2xl transition-transform duration-300 ${
           isOpen ? 'translate-y-0 scale-100' : 'translate-y-4 scale-95'
         }`}
       >
@@ -82,7 +82,7 @@ export function ZapModal() {
             </svg>
             <h2
               id="modal-title"
-              className="text-raposo-dark-300 text-sm font-bold tracking-widest uppercase"
+              className="text-sm font-bold tracking-widest text-zinc-300 uppercase"
             >
               Enviar mensagem
             </h2>
@@ -90,7 +90,7 @@ export function ZapModal() {
           <button
             onClick={closeModal}
             aria-label="Fechar"
-            className="text-raposo-dark-500 hover:text-raposo-dark-200 rounded p-1 transition-colors"
+            className="rounded p-1 text-zinc-500 transition-colors hover:text-zinc-200"
           >
             <svg
               className="h-5 w-5"
@@ -108,19 +108,17 @@ export function ZapModal() {
           </button>
         </div>
 
-        <p className="text-raposo-dark-500 mb-1 text-xs font-semibold tracking-widest uppercase">
+        <p className="mb-1 text-xs font-semibold tracking-widest text-zinc-500 uppercase">
           Prévia da mensagem
         </p>
-        <div className="border-raposo-dark-700 bg-raposo-dark-950 mb-6 border px-4 py-3">
-          <p className="text-raposo-dark-300 text-sm leading-relaxed">
-            {message}
-          </p>
+        <div className="mb-6 border border-zinc-700 bg-zinc-950 px-4 py-3">
+          <p className="text-sm leading-relaxed text-zinc-300">{message}</p>
         </div>
 
         <div className="flex gap-3">
           <button
             onClick={closeModal}
-            className="border-raposo-dark-700 text-raposo-dark-400 hover:bg-raposo-dark-800-800 hover:text-raposo-dark-200 flex-1 border px-4 py-3 text-sm font-bold tracking-wider uppercase transition-colors"
+            className="hover:bg-zinc-800-800 flex-1 border border-zinc-700 px-4 py-3 text-sm font-bold tracking-wider text-zinc-400 uppercase transition-colors hover:text-zinc-200"
           >
             Cancelar
           </button>

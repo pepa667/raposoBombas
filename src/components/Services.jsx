@@ -46,42 +46,6 @@ function ServiceCard({ title, desc }) {
 
 export function Services() {
   return (
-    // {SERVICOS.map((servico, index) => (
-    //   <div
-    //     key={index}
-    //     style={{ '--delay-step': `${servico.revealDelay}%` }}
-    //     /* AJUSTADO AQUI: Mudamos para hover:[&_.reveal]:bottom-0 */
-    //     className={`group border-raposo-yellow-dark bg-raposo-red-dark relative aspect-square overflow-hidden border-2 border-t border-b-8 hover:[&_.reveal]:bottom-0`}
-    //   >
-    //     <div className="relative aspect-square transition-all duration-700 group-hover:blur-lg group-[&.active]:blur-md">
-    //       <picture>
-    //         <source srcSet={servico.ilustraWebp} type="image/webp" />
-    //         <img
-    //           src={servico.ilustraPng}
-    //           alt={servico.title}
-    //           className="size-full object-cover p-8" /* Corrigido de 'class' para 'className' que é o padrão do React */
-    //           loading="lazy"
-    //         />
-    //       </picture>
-
-    //       {/* Nota: Este segundo h2 também tem a classe 'reveal'. Ele também será afetado pelo bottom-0! */}
-    //       <h2 className="reveal bg-raposo-yellow-dark text-raposo-yellow-light absolute bottom-0 float-left w-full py-2 text-center text-2xl">
-    //         {servico.title}
-    //       </h2>
-    //     </div>
-
-    //     {/* O seu primeiro .reveal agora vai subir perfeitamente ao dar hover no pai */}
-    //     <div className="reveal bg-raposo-red/50 absolute -bottom-full left-0 flex aspect-square size-full flex-col flex-wrap justify-evenly p-6 text-center transition-all duration-500">
-    //       <h3 className="text-raposo-yellow mb-2 text-2xl font-bold">
-    //         {servico.title}
-    //       </h3>
-    //       <p className="text-raposo-dark-200 text-xl leading-relaxed">
-    //         {servico.description}
-    //       </p>
-    //     </div>
-    //   </div>
-    // ))}
-
     // {/* ==========================================
     //           4. SERVIÇOS (Os Cards com aquele seu seletor :is() )
     //       ========================================== */}
