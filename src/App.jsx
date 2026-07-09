@@ -1,4 +1,3 @@
-import { Observer } from 'tailwindcss-intersect';
 import { useEffect, useState } from 'preact/hooks';
 
 import { Header } from './components/Header';
