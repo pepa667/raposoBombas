@@ -39,7 +39,11 @@ export function About() {
           <div class="flex aspect-square items-center justify-center bg-zinc-900 text-zinc-600 md:aspect-4/3">
             <picture className="absolute inset-0 block opacity-50">
               {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
-              <source srcSet={motorAvif} type="image/avif" />
+              <source
+                srcSet={motorAvif}
+                type="image/avif"
+                fetchpriority="high"
+              />
               <source srcSet={motorWebp} type="image/webp" />
 
               {/* É essa tag que vai receber toda a estilização física e o comportamento visual */}

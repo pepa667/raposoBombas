@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* @plugin 'tailwindcss-motion'; */
 /* @plugin 'tailwindcss-intersect'; */
@@ -25,12 +25,12 @@
     /* Combine translate X and Y into one property */
     transform: translate(var(--revealX, 0px), var(--revealY, 0px));
     /* Combine blur and brightness into one property */
-    filter: blur(var(--revealBlur, 0px)) brightness(var(--revealBrightness, 0));
+    /* filter: blur(var(--revealBlur, 0px)) brightness(var(--revealBrightness, 0)); */
   }
   to {
     opacity: 1;
     transform: translate(0, 0);
-    filter: blur(0px) brightness(1);
+    /* filter: blur(0px) brightness(1); */
   }
 }
 
@@ -42,8 +42,7 @@
   animation-fill-mode: both;
   animation-timeline: --section;
   /* Usa a variável se ela existir, senão o padrão é 0% */
-  animation-range: entry calc(2% + var(--delay-step, 0%)) contain
-    calc(20% + var(--delay-step, 0%));
+  animation-range: entry calc(2% + var(--delay-step, 0%)) contain calc(20% + var(--delay-step, 0%));
 }
 
 /* Fallback clássico caso o navegador não suporte animação de scroll */
