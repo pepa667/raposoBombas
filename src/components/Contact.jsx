@@ -10,7 +10,7 @@ export function Contact() {
     //       ========================================== */}
     <section
       id="contato"
-      class="relative z-10 overflow-hidden bg-amber-500 px-4 py-24"
+      class="bg-primary relative z-10 overflow-hidden px-4 py-24"
     >
       {/* Efeito de fundo sutil para a área de contato */}
       <div class="pointer-events-none absolute top-0 right-0 -mt-20 -mr-20 h-96 w-96 rounded-full bg-yellow-400/50 blur-3xl"></div>

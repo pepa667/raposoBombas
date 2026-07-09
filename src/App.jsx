@@ -14,22 +14,23 @@ import { ZapModal } from './components/ZapModal';
 export function App() {
   // O Hook de ScrollReveal que construímos (Roda apenas em dispositivos touch/mobile)
   useEffect(() => {
-    if (!globalThis.matchMedia('(pointer: coarse)').matches) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.add('entrance');
+            if (!globalThis.matchMedia('(pointer: coarse)').matches) return;
             entry.target.classList.add('active');
           } else {
             entry.target.classList.remove('active');
+            entry.target.classList.remove('entrance');
           }
         });
       },
-      { threshold: 0.2, rootMargin: '-10% 0px' },
+      { threshold: 0.2, rootMargin: '-30% 0px' },
     );
 
-    const elements = document.querySelectorAll('.reveal-card');
+    const elements = document.querySelectorAll('.reveal');
     elements.forEach((el) => observer.observe(el));
 
     return () => {

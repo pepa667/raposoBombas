@@ -45,7 +45,7 @@ export function About() {
               />
             </picture>
           </div>
-          <div class="absolute inset-0 bg-linear-to-tr from-amber-500/10 to-transparent mix-blend-overlay"></div>
+          <div class="from-primary/10 absolute inset-0 bg-linear-to-tr to-transparent mix-blend-overlay"></div>
         </div>
       </div>
     </section>

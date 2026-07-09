@@ -52,13 +52,13 @@ export function Hero() {
           lightText={false} // Mantém o vinho padrão e o amarelo originais. Mude para true se o fundo pedir texto claro.
         />
 
-        <span className="text-sm font-bold tracking-widest text-amber-500 uppercase">
+        <span className="text-primary text-sm font-bold tracking-widest uppercase">
           Especialistas em Diesel desde 1985
         </span>
         <h2 className="text-5xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-7xl">
           Diagnóstico Exato.
           <br />
-          <span className="bg-linear-to-r from-amber-500 to-yellow-300 bg-clip-text text-transparent">
+          <span className="from-primary bg-linear-to-r to-yellow-300 bg-clip-text text-transparent">
             Zero Achismo.
           </span>
         </h2>

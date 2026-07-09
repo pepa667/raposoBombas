@@ -1,14 +1,14 @@
 function TestimonialCard({ name, role, text }) {
   return (
-    <div class="flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900 p-8 transition-colors hover:border-amber-500/50">
+    <div className="hover:border-primary/50 reveal [.entrance]:motion-translate-y-in-100 flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900 p-8 transition-colors">
       <div>
         {/* Estrelinhas de avaliação (5 estrelas padrão) */}
-        <div class="mb-4 flex text-sm text-amber-500">★★★★★</div>
-        <p class="mb-6 text-zinc-300 italic">"{text}"</p>
+        <div className="text-primary mb-4 flex text-sm">★★★★★</div>
+        <p className="mb-6 text-zinc-300 italic">"{text}"</p>
       </div>
       <div>
-        <h4 class="font-bold text-white">{name}</h4>
-        <span class="text-xs font-bold tracking-wider text-amber-500 uppercase">
+        <h4 className="font-bold text-white">{name}</h4>
+        <span className="text-primary text-xs font-bold tracking-wider uppercase">
           {role}
         </span>
       </div>
@@ -21,18 +21,18 @@ export function Testimonial() {
     // <{/* ==========================================
     //       5. PROVA SOCIAL (DEPOIMENTOS)
     //   ========================================== */}
-    <section class="relative z-10 bg-zinc-950 px-4 py-24">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-16 text-center">
-          <h3 class="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section className="relative z-10 bg-zinc-950 px-4 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 text-center">
+          <h3 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             O que dizem nossos clientes
           </h3>
-          <p class="text-zinc-400">
+          <p className="text-zinc-400">
             Transparência que gera confiança há mais de 30 anos.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <TestimonialCard
             name="Carlos Eduardo"
             role="Frotista"

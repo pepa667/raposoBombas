@@ -5,41 +5,27 @@ import bicosPng from '../assets/services/bico_photo.png';
 import bombasPng from '../assets/services/bomba_photo.png';
 import injecaoPng from '../assets/services/modulo_photo.png';
 
-const SERVICOS = [
-  {
-    title: 'Bombas Injetoras',
-    description:
-      'Testes, regulagem eletrônica e recondicionamento completo de bombas injetoras convencionais e de alta pressão.',
-    revealDelay: '0',
-    ilustraWebp: bombasWebp,
-    ilustraPng: bombasPng,
-  },
-  {
-    title: 'Bicos Injetores',
-    description:
-      'Análise de vazão, limpeza por ultrassom, calibração precisa e troca de componentes para pulverização perfeita.',
-    revealDelay: '25',
-    ilustraWebp: bicosWebp,
-    ilustraPng: bicosPng,
-  },
-  {
-    title: 'Injeção Eletrônica Diesel',
-    description:
-      'Diagnóstico via scanner computadorizado de sistemas Common Rail e correção de falhas eletrônicas complexas.',
-    revealDelay: '50',
-    ilustraWebp: injecaoWebp,
-    ilustraPng: injecaoPng,
-  },
-];
-
-function ServiceCard({ title, desc }) {
+function ServiceCard({ title, desc, ilustraWebp, ilustraPng }) {
   return (
-    <div class="reveal-card /* Desktop: Hover Padrão */ /* Mobile: Ativa no Hover OU na classe .active (injetada pelo scroll) */ rounded-xl border border-zinc-800 bg-zinc-950 p-8 transition-all duration-500 md:hover:-translate-y-2 md:hover:border-amber-500 md:hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] max-md:[&:is(:hover,.active)]:-translate-y-2 max-md:[&:is(:hover,.active)]:border-amber-500 max-md:[&:is(:hover,.active)]:shadow-[0_0_20px_rgba(245,158,11,0.1)]">
-      <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-amber-500">
-        ⚙️
+    <div class="reveal group md:hover:border-primary max-md:[&:is(:hover,.active)]:border-primary relative mt-24 flex h-48 flex-col flex-wrap justify-end rounded-xl border border-zinc-800 bg-zinc-950 p-8 transition-all *:z-10 md:hover:-translate-y-2 md:hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] max-md:[&:is(:hover,.active)]:-translate-y-2 max-md:[&:is(:hover,.active)]:shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+      {' '}
+      <div class="reveal text-primary group-[:hover,.active]:border-primary absolute -top-32 right-0 z-0 m-4 size-48 rounded-lg border border-zinc-800 bg-zinc-900 transition-all">
+        <picture>
+          {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
+          <source srcSet={ilustraWebp} type="image/webp" />
+          {/* É essa tag que vai receber toda a estilização física e o comportamento visual */}
+          <img
+            src={ilustraPng}
+            alt={title}
+            class="size-full object-cover"
+            loading="lazy"
+          />
+        </picture>
       </div>
-      <h4 class="mb-3 text-xl font-bold text-white">{title}</h4>
-      <p class="text-zinc-400">{desc}</p>
+      <div className="lg:w-3/4">
+        <h4 class="mb-3 align-bottom text-xl font-bold text-white">{title}</h4>
+        <p class="text-zinc-400">{desc}</p>
+      </div>
     </div>
   );
 }
@@ -67,14 +53,20 @@ export function Services() {
           <ServiceCard
             title="Bombas Injetoras"
             desc="Manutenção completa em sistemas mecânicos tradicionais."
+            ilustraPng={bombasPng}
+            ilustraWebp={bombasWebp}
           />
           <ServiceCard
             title="Injeção Eletrônica"
             desc="Diagnóstico avançado de módulos e sistemas Common Rail."
+            ilustraPng={injecaoPng}
+            ilustraWebp={injecaoWebp}
           />
           <ServiceCard
             title="Turbos e Bicos"
             desc="Calibração e reparo de bicos injetores para máxima potência."
+            ilustraPng={bicosPng}
+            ilustraWebp={bicosWebp}
           />
         </div>
       </div>
