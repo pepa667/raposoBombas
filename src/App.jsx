@@ -23,11 +23,10 @@ export function App() {
             entry.target.classList.add('active');
           } else {
             entry.target.classList.remove('active');
-            entry.target.classList.remove('entrance');
           }
         });
       },
-      { threshold: 0.2, rootMargin: '-30% 0px' },
+      { threshold: 0.2, rootMargin: '-20% 20%' },
     );
 
     const elements = document.querySelectorAll('.reveal');

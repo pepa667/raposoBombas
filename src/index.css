@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@plugin 'tailwindcss-motion';
+/* @plugin 'tailwindcss-motion'; */
 @plugin 'tailwindcss-intersect';
 
 @theme {
@@ -16,5 +16,53 @@
   }
   main {
     @apply min-h-screen bg-zinc-950 font-sans text-slate-200 selection:bg-primary selection:text-zinc-900 **:duration-750;
+  }
+}
+@keyframes heroEnter {
+  from {
+    transform: translateY(25svh); /* Moves exactly by its own height */
+    opacity: 0; /* Cleaner than filter: opacity */
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-enter {
+  animation: heroEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealOnScroll {
+  from {
+    opacity: 0;
+    /* Combine translate X and Y into one property */
+    transform: translate(var(--revealX, 0px), var(--revealY, 0px));
+    /* Combine blur and brightness into one property */
+    filter: blur(var(--revealBlur, 0px)) brightness(var(--revealBrightness, 0));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0px) brightness(1);
+  }
+}
+
+/* Aplica reveal suave conforme as seções entram na tela */
+.scroll-reveal {
+  view-timeline-name: --section;
+  view-timeline-axis: block;
+  animation-name: revealOnScroll;
+  animation-fill-mode: both;
+  animation-timeline: --section;
+  /* Usa a variável se ela existir, senão o padrão é 0% */
+  animation-range: entry calc(2% + var(--delay-step, 0%)) contain calc(20% + var(--delay-step, 0%));
+}
+
+/* Fallback clássico caso o navegador não suporte animação de scroll */
+@media (prefixed-animation-timeline: none) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
   }
 }

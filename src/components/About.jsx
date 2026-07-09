@@ -9,7 +9,10 @@ export function About() {
     //       ========================================== */}
     <section id="sobre" class="relative z-10 bg-zinc-950 px-4 py-24">
       <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 md:grid-cols-2">
-        <div class="space-y-6">
+        <div
+          class="reveal scroll-reveal space-y-6"
+          style={{ '--revealX': `500px` }}
+        >
           <h3 class="text-3xl font-bold text-white md:text-4xl">
             Evoluindo junto com o seu motor.
           </h3>
@@ -27,7 +30,10 @@ export function About() {
         </div>
 
         {/* Aqui entra a imagem que geramos via IA */}
-        <div class="relative overflow-hidden rounded-2xl border border-zinc-800 shadow-2xl">
+        <div
+          class="reveal scroll-reveal relative overflow-hidden rounded-2xl border border-zinc-800 shadow-2xl"
+          style={{ '--revealX': `-500px` }}
+        >
           {/* Se tiver a imagem salva, coloque no src abaixo: */}
           {/* <img src={engineImg} alt="Motor a Diesel High-Tech" class="w-full h-auto object-cover" /> */}
           <div class="flex aspect-square items-center justify-center bg-zinc-900 text-zinc-600 md:aspect-4/3">

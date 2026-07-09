@@ -1,10 +1,17 @@
-function TestimonialCard({ name, role, text }) {
+function TestimonialCard({ name, role, text, delay, reveal, revealBlur }) {
   return (
-    <div className="hover:border-primary/50 reveal [.entrance]:motion-translate-y-in-100 flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900 p-8 transition-colors">
+    <div
+      className="hover:border-primary/50 group scroll-reveal reveal justify-between rounded-xl border border-zinc-800 bg-zinc-900 p-8"
+      style={{
+        '--delay-step': `${delay}%`,
+        '--revealY': `${reveal}px`,
+        '--revealBlur': `${revealBlur}px`,
+      }}
+    >
       <div>
         {/* Estrelinhas de avaliação (5 estrelas padrão) */}
         <div className="text-primary mb-4 flex text-sm">★★★★★</div>
-        <p className="mb-6 text-zinc-300 italic">"{text}"</p>
+        <p className=". mb-6 text-zinc-300 italic">"{text}"</p>
       </div>
       <div>
         <h4 className="font-bold text-white">{name}</h4>
@@ -37,16 +44,25 @@ export function Testimonial() {
             name="Carlos Eduardo"
             role="Frotista"
             text="Única oficina que não tentou me empurrar a troca da bomba inteira. Arrumaram o módulo e economizei uma grana. Profissionais demais."
+            delay="0"
+            reveal="-500px"
+            revealBlur="0%"
           />
           <TestimonialCard
             name="Roberto Almeida"
             role="Caminhoneiro Autônomo"
             text="Meu caminhão estava perdendo força na subida. Passaram o scanner, acharam o B.O. na hora e no dia seguinte já estava na estrada de novo."
+            delay="15"
+            reveal="15"
+            revealBlur="15"
           />
           <TestimonialCard
             name="Auto Viação Sul"
             role="Cliente Corporativo"
             text="Parceria de anos. A Raposo Bombas cuida de toda a nossa frota a diesel. Serviço impecável e sempre entregam no prazo."
+            delay="20"
+            reveal="75"
+            revealBlur="75"
           />
         </div>
       </div>

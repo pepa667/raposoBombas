@@ -5,10 +5,24 @@ import bicosPng from '../assets/services/bico_photo.png';
 import bombasPng from '../assets/services/bomba_photo.png';
 import injecaoPng from '../assets/services/modulo_photo.png';
 
-function ServiceCard({ title, desc, ilustraWebp, ilustraPng }) {
+function ServiceCard({
+  title,
+  desc,
+  ilustraWebp,
+  ilustraPng,
+  delay,
+  reveal,
+  revealBlur,
+}) {
   return (
-    <div class="reveal group md:hover:border-primary max-md:[&:is(:hover,.active)]:border-primary relative mt-24 flex h-48 flex-col flex-wrap justify-end rounded-xl border border-zinc-800 bg-zinc-950 p-8 transition-all *:z-10 md:hover:-translate-y-2 md:hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] max-md:[&:is(:hover,.active)]:-translate-y-2 max-md:[&:is(:hover,.active)]:shadow-[0_0_20px_rgba(245,158,11,0.1)]">
-      {' '}
+    <div
+      class="reveal group scroll-reveal md:hover:border-primary max-md:[&:is(:hover,.active)]:border-primary relative mt-24 flex h-48 flex-col flex-wrap justify-end rounded-xl border border-zinc-800 bg-zinc-950 p-8 transition-all *:z-10 md:hover:-translate-y-2 md:hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] max-md:[&:is(:hover,.active)]:-translate-y-2 max-md:[&:is(:hover,.active)]:shadow-[0_0_20px_rgba(245,158,11,0.1)]"
+      style={{
+        '--delay-step': `${delay}%`,
+        '--revealY': `${reveal}px`,
+        '--revealBlur': `${revealBlur}px`,
+      }}
+    >
       <div class="reveal text-primary group-[:hover,.active]:border-primary absolute -top-32 right-0 z-0 m-4 size-48 rounded-lg border border-zinc-800 bg-zinc-900 transition-all">
         <picture>
           {/* O navegador só olha o srcSet e o type aqui para decidir qual arquivo baixar */}
@@ -55,18 +69,24 @@ export function Services() {
             desc="Manutenção completa em sistemas mecânicos tradicionais."
             ilustraPng={bombasPng}
             ilustraWebp={bombasWebp}
+            delay="0"
+            reveal="0"
           />
           <ServiceCard
             title="Injeção Eletrônica"
             desc="Diagnóstico avançado de módulos e sistemas Common Rail."
             ilustraPng={injecaoPng}
             ilustraWebp={injecaoWebp}
+            delay="10"
+            reveal="100"
           />
           <ServiceCard
             title="Turbos e Bicos"
             desc="Calibração e reparo de bicos injetores para máxima potência."
             ilustraPng={bicosPng}
             ilustraWebp={bicosWebp}
+            delay="20"
+            reveal="200"
           />
         </div>
       </div>
