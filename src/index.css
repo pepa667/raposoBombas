@@ -18,20 +18,6 @@
     @apply selection:bg-primary min-h-screen bg-zinc-950 font-sans text-slate-200 **:duration-750 selection:text-zinc-900;
   }
 }
-@keyframes heroEnter {
-  from {
-    transform: translateY(25svh); /* Moves exactly by its own height */
-    opacity: 0; /* Cleaner than filter: opacity */
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.hero-enter {
-  animation: heroEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
 
 @keyframes revealOnScroll {
   from {
