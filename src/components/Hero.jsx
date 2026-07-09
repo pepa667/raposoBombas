@@ -46,23 +46,23 @@ export function Hero() {
       </div>
 
       {/* Conteúdo Hero */}
-      <div className="hero-enter relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 text-center 2xl:gap-12">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 text-center 2xl:gap-12">
         <LogoRaposo
           className="relative aspect-4/1 h-28 max-w-[80svw]"
           lightText={false} // Mantém o vinho padrão e o amarelo originais. Mude para true se o fundo pedir texto claro.
         />
 
-        <span className="text-primary hero-enter text-sm font-bold tracking-widest uppercase">
+        <span className="text-primary text-sm font-bold tracking-widest uppercase">
           Especialistas em Diesel desde 1985
         </span>
-        <h2 className="hero-enter text-5xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-7xl">
+        <h2 className="text-5xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-7xl">
           Diagnóstico Exato.
           <br />
-          <span className="from-primary hero-enter bg-linear-to-r to-yellow-300 bg-clip-text text-transparent">
+          <span className="from-primary bg-linear-to-r to-yellow-300 bg-clip-text text-transparent">
             Zero Achismo.
           </span>
         </h2>
-        <p className="hero-enter max-w-2xl text-lg text-zinc-300 drop-shadow-md md:text-xl">
+        <p className="max-w-2xl text-lg text-zinc-300 drop-shadow-md md:text-xl">
           Da mecânica tradicional à injeção eletrônica avançada. Poupamos o seu
           dinheiro resolvendo o problema real do seu motor.
         </p>
